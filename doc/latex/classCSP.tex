@@ -1,0 +1,248 @@
+\hypertarget{classCSP}{
+\section{CSP$<$ T $>$ Class Template Reference}
+\label{classCSP}\index{CSP@{CSP}}
+}
+
+
+Main class for managing a \hyperlink{classCSP}{CSP}.  
+
+
+
+
+{\ttfamily \#include $<$csp++.h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct {\bfseries arc}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classCSP_ad49548121582cc2d59e0d7f100092b75}{CSP} (int n, bool($\ast$c)(std::vector$<$ \hyperlink{structCSPvariable}{CSPvariable}$<$ T $>$ $>$)=\_\-\_\-default\_\-constraint)
+\begin{DoxyCompactList}\small\item\em Class constructor. \item\end{DoxyCompactList}\item 
+\hyperlink{classCSP_a734bb08d8f45394a2acfc8822981a6d0}{CSP} (int n, T default\_\-value, bool set\_\-variables=false, bool($\ast$c)(std::vector$<$ \hyperlink{structCSPvariable}{CSPvariable}$<$ T $>$ $>$)=\_\-\_\-default\_\-constraint)
+\begin{DoxyCompactList}\small\item\em Class constructor. \item\end{DoxyCompactList}\item 
+void \hyperlink{classCSP_a4017c17aac9d3e96d0e821ebbe09da7b}{setDomain} (size\_\-t index, std::vector$<$ T $>$ domain)
+\begin{DoxyCompactList}\small\item\em Set the domain for the i-\/th variable. \item\end{DoxyCompactList}\item 
+void \hyperlink{classCSP_a65518e67e33e31bff1b5f9aabdf80a01}{setDomain} (size\_\-t index, T domain\mbox{[}$\,$\mbox{]}, int size)
+\begin{DoxyCompactList}\small\item\em Set the domain for the i-\/th variable. \item\end{DoxyCompactList}\item 
+void \hyperlink{classCSP_a534a0d9bd10fb544f94196bf3c386657}{setConstraint} (bool($\ast$c)(std::vector$<$ \hyperlink{structCSPvariable}{CSPvariable}$<$ T $>$ $>$))
+\begin{DoxyCompactList}\small\item\em Apply the constraint to the \hyperlink{classCSP}{CSP} as a boolean function. \item\end{DoxyCompactList}\item 
+void \hyperlink{classCSP_a457e1df05d4ec16be00118bda22fd882}{setConstraint} (std::vector$<$ bool($\ast$)(std::vector$<$ \hyperlink{structCSPvariable}{CSPvariable}$<$ T $>$ $>$) $>$ c)
+\begin{DoxyCompactList}\small\item\em Apply the constraints to the \hyperlink{classCSP}{CSP} as vector of boolean functions. \item\end{DoxyCompactList}\item 
+void \hyperlink{classCSP_a0231b93bceae257f0e1c35041f8fe63f}{dropConstraint} (size\_\-t index)
+\begin{DoxyCompactList}\small\item\em Drops a constraint from the \hyperlink{classCSP}{CSP}. \item\end{DoxyCompactList}\item 
+void \hyperlink{classCSP_a8dc6aec6ca7e40d198e58b0ec14fee66}{appendConstraint} (bool($\ast$c)(std::vector$<$ \hyperlink{structCSPvariable}{CSPvariable}$<$ T $>$ $>$))
+\begin{DoxyCompactList}\small\item\em Append a constraint to the list of the constraint of the \hyperlink{classCSP}{CSP}. \item\end{DoxyCompactList}\item 
+void \hyperlink{classCSP_a466845256e638c5e258fd728b641359f}{refreshDomains} (void)
+\begin{DoxyCompactList}\small\item\em Updates the domains of the variables. Any constraint or node fixed value is applied. \item\end{DoxyCompactList}\item 
+std::vector$<$ T $>$ \hyperlink{classCSP_a2a9a7d8072613f6984795d5495373847}{getDomain} (size\_\-t index)
+\begin{DoxyCompactList}\small\item\em Get the domain of the i-\/th variable. \item\end{DoxyCompactList}\item 
+size\_\-t \hyperlink{classCSP_a91a0e89bc1882d39b88122bee392c5f3}{getSize} (void)
+\begin{DoxyCompactList}\small\item\em Get the number of variables in the current \hyperlink{classCSP}{CSP}. \item\end{DoxyCompactList}\item 
+void \hyperlink{classCSP_ac25064c5b2d4e1020173b56913251ebd}{setValue} (size\_\-t index, T value)
+\begin{DoxyCompactList}\small\item\em Set the value of a variable as a constraint. \item\end{DoxyCompactList}\item 
+void \hyperlink{classCSP_a4c0cae125a610f519dc22eaec255a0ae}{unsetValue} (size\_\-t index)
+\begin{DoxyCompactList}\small\item\em Marks a variable as not set, and if a default value was assigned in the \hyperlink{classCSP}{CSP} constructor, this value will be set. By default, unless specified in the constructor, all the variables are considered as not set. \item\end{DoxyCompactList}\item 
+bool \hyperlink{classCSP_a7ef9eb91c38815c9d82182696a6bd5d3}{isSatisfiable} (void)
+\begin{DoxyCompactList}\small\item\em Check if the current \hyperlink{classCSP}{CSP}, with the applied constraints, is satisfiable. \item\end{DoxyCompactList}\item 
+bool \hyperlink{classCSP_ae96286c6c7dfb6fe077544e0d4af15f4}{hasUniqueSolution} (void)
+\begin{DoxyCompactList}\small\item\em Check if the \hyperlink{classCSP}{CSP}, with the given variables, domains and constraints, admits a unique solution, i.e. each domain of each variable contains an only element. \item\end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$class T$>$ class CSP$<$ T $>$}
+
+Main class for managing a \hyperlink{classCSP}{CSP}. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classCSP_ad49548121582cc2d59e0d7f100092b75}{
+\index{CSP@{CSP}!CSP@{CSP}}
+\index{CSP@{CSP}!CSP@{CSP}}
+\subsubsection[{CSP}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf CSP}$<$ T $>$::{\bf CSP} (int {\em n}, \/  bool($\ast$)(std::vector$<$ {\bf CSPvariable}$<$ T $>$ $>$) {\em c} = {\ttfamily \_\-\_\-default\_\-constraint})}}
+\label{classCSP_ad49548121582cc2d59e0d7f100092b75}
+
+
+Class constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em n}]Number of variables in the \hyperlink{classCSP}{CSP} \item[{\em c}]Boolean function representing the constraint of the \hyperlink{classCSP}{CSP} If no constraint function is set in the constructor or using the applyConstraint() method, a default function always returning true will be used, that allows any domain for any variable to be valid (no constraint) \end{DoxyParams}
+\hypertarget{classCSP_a734bb08d8f45394a2acfc8822981a6d0}{
+\index{CSP@{CSP}!CSP@{CSP}}
+\index{CSP@{CSP}!CSP@{CSP}}
+\subsubsection[{CSP}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ {\bf CSP}$<$ T $>$::{\bf CSP} (int {\em n}, \/  T {\em default\_\-value}, \/  bool {\em set\_\-variables} = {\ttfamily false}, \/  bool($\ast$)(std::vector$<$ {\bf CSPvariable}$<$ T $>$ $>$) {\em c} = {\ttfamily \_\-\_\-default\_\-constraint})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classCSP_a734bb08d8f45394a2acfc8822981a6d0}
+
+
+Class constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em n}]Number of variables in the \hyperlink{classCSP}{CSP} \item[{\em default\_\-value}]Default value for the variables in the \hyperlink{classCSP}{CSP} when initialized \item[{\em set\_\-variables}]Decide whether mark the variables set with default\_\-value as \char`\"{}set\char`\"{} or \char`\"{}not set\char`\"{} (default: not set) \item[{\em c}]Boolean function representing the constraint of the \hyperlink{classCSP}{CSP} If no constraint function is set in the constructor or using the applyConstraint() method, a default function always returning true will be used, that allows any domain for any variable to be valid (no constraint) \end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classCSP_a8dc6aec6ca7e40d198e58b0ec14fee66}{
+\index{CSP@{CSP}!appendConstraint@{appendConstraint}}
+\index{appendConstraint@{appendConstraint}!CSP@{CSP}}
+\subsubsection[{appendConstraint}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf CSP}$<$ T $>$::appendConstraint (bool($\ast$)(std::vector$<$ {\bf CSPvariable}$<$ T $>$ $>$) {\em c})}}
+\label{classCSP_a8dc6aec6ca7e40d198e58b0ec14fee66}
+
+
+Append a constraint to the list of the constraint of the \hyperlink{classCSP}{CSP}. 
+
+METHOD: appendConstraint 
+\begin{DoxyParams}{Parameters}
+\item[{\em c}]A function pointer returning a boolean value representing the new constraint \end{DoxyParams}
+\hypertarget{classCSP_a0231b93bceae257f0e1c35041f8fe63f}{
+\index{CSP@{CSP}!dropConstraint@{dropConstraint}}
+\index{dropConstraint@{dropConstraint}!CSP@{CSP}}
+\subsubsection[{dropConstraint}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf CSP}$<$ T $>$::dropConstraint (size\_\-t {\em index})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classCSP_a0231b93bceae257f0e1c35041f8fe63f}
+
+
+Drops a constraint from the \hyperlink{classCSP}{CSP}. 
+
+METHOD: dropConstraint 
+\begin{DoxyParams}{Parameters}
+\item[{\em index}]Index of the constraint to be dropped \end{DoxyParams}
+\hypertarget{classCSP_a2a9a7d8072613f6984795d5495373847}{
+\index{CSP@{CSP}!getDomain@{getDomain}}
+\index{getDomain@{getDomain}!CSP@{CSP}}
+\subsubsection[{getDomain}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ std::vector$<$ T $>$ {\bf CSP}$<$ T $>$::getDomain (size\_\-t {\em index})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classCSP_a2a9a7d8072613f6984795d5495373847}
+
+
+Get the domain of the i-\/th variable. 
+
+METHOD: getDomain 
+\begin{DoxyParams}{Parameters}
+\item[{\em index}]Variable for which we're going to get the domain \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The domain of the i-\/th variable as a vector of T 
+\end{DoxyReturn}
+\hypertarget{classCSP_a91a0e89bc1882d39b88122bee392c5f3}{
+\index{CSP@{CSP}!getSize@{getSize}}
+\index{getSize@{getSize}!CSP@{CSP}}
+\subsubsection[{getSize}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ size\_\-t {\bf CSP}$<$ T $>$::getSize (void)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classCSP_a91a0e89bc1882d39b88122bee392c5f3}
+
+
+Get the number of variables in the current \hyperlink{classCSP}{CSP}. 
+
+METHOD: getSize \begin{DoxyReturn}{Returns}
+Size of the \hyperlink{classCSP}{CSP} 
+\end{DoxyReturn}
+\hypertarget{classCSP_ae96286c6c7dfb6fe077544e0d4af15f4}{
+\index{CSP@{CSP}!hasUniqueSolution@{hasUniqueSolution}}
+\index{hasUniqueSolution@{hasUniqueSolution}!CSP@{CSP}}
+\subsubsection[{hasUniqueSolution}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ bool {\bf CSP}$<$ T $>$::hasUniqueSolution (void)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classCSP_ae96286c6c7dfb6fe077544e0d4af15f4}
+
+
+Check if the \hyperlink{classCSP}{CSP}, with the given variables, domains and constraints, admits a unique solution, i.e. each domain of each variable contains an only element. 
+
+FUNCTION: hasUniqueSolution \begin{DoxyReturn}{Returns}
+true if the \hyperlink{classCSP}{CSP} has an only possible solution, false otherwise 
+\end{DoxyReturn}
+\hypertarget{classCSP_a7ef9eb91c38815c9d82182696a6bd5d3}{
+\index{CSP@{CSP}!isSatisfiable@{isSatisfiable}}
+\index{isSatisfiable@{isSatisfiable}!CSP@{CSP}}
+\subsubsection[{isSatisfiable}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ bool {\bf CSP}$<$ T $>$::isSatisfiable (void)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classCSP_a7ef9eb91c38815c9d82182696a6bd5d3}
+
+
+Check if the current \hyperlink{classCSP}{CSP}, with the applied constraints, is satisfiable. 
+
+METHOD: isSatisfiable \begin{DoxyReturn}{Returns}
+true if the \hyperlink{classCSP}{CSP} has at least a possible solution, false otherwise 
+\end{DoxyReturn}
+\hypertarget{classCSP_a466845256e638c5e258fd728b641359f}{
+\index{CSP@{CSP}!refreshDomains@{refreshDomains}}
+\index{refreshDomains@{refreshDomains}!CSP@{CSP}}
+\subsubsection[{refreshDomains}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf CSP}$<$ T $>$::refreshDomains (void)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classCSP_a466845256e638c5e258fd728b641359f}
+
+
+Updates the domains of the variables. Any constraint or node fixed value is applied. 
+
+METHOD: refreshDomains \hypertarget{classCSP_a457e1df05d4ec16be00118bda22fd882}{
+\index{CSP@{CSP}!setConstraint@{setConstraint}}
+\index{setConstraint@{setConstraint}!CSP@{CSP}}
+\subsubsection[{setConstraint}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf CSP}$<$ T $>$::setConstraint (std::vector$<$ bool($\ast$)(std::vector$<$ {\bf CSPvariable}$<$ T $>$ $>$) $>$ {\em c})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classCSP_a457e1df05d4ec16be00118bda22fd882}
+
+
+Apply the constraints to the \hyperlink{classCSP}{CSP} as vector of boolean functions. 
+
+METHOD: setConstraint 
+\begin{DoxyParams}{Parameters}
+\item[{\em c}]Vector containing pointers to boolean functions representing the constraints of the \hyperlink{classCSP}{CSP} \end{DoxyParams}
+\hypertarget{classCSP_a534a0d9bd10fb544f94196bf3c386657}{
+\index{CSP@{CSP}!setConstraint@{setConstraint}}
+\index{setConstraint@{setConstraint}!CSP@{CSP}}
+\subsubsection[{setConstraint}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf CSP}$<$ T $>$::setConstraint (bool($\ast$)(std::vector$<$ {\bf CSPvariable}$<$ T $>$ $>$) {\em c})}}
+\label{classCSP_a534a0d9bd10fb544f94196bf3c386657}
+
+
+Apply the constraint to the \hyperlink{classCSP}{CSP} as a boolean function. 
+
+METHOD: setConstraint 
+\begin{DoxyParams}{Parameters}
+\item[{\em c}]Boolean function representing the constraint of the \hyperlink{classCSP}{CSP} \end{DoxyParams}
+\hypertarget{classCSP_a65518e67e33e31bff1b5f9aabdf80a01}{
+\index{CSP@{CSP}!setDomain@{setDomain}}
+\index{setDomain@{setDomain}!CSP@{CSP}}
+\subsubsection[{setDomain}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf CSP}$<$ T $>$::setDomain (size\_\-t {\em index}, \/  T {\em domain}\mbox{[}$\,$\mbox{]}, \/  int {\em size})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classCSP_a65518e67e33e31bff1b5f9aabdf80a01}
+
+
+Set the domain for the i-\/th variable. 
+
+METHOD: setDomain 
+\begin{DoxyParams}{Parameters}
+\item[{\em index}]Variable for which we're setting the domain \item[{\em domain}]Array containing the possible values for that variable \item[{\em size}]Size of \char`\"{}domain\char`\"{} array \end{DoxyParams}
+\hypertarget{classCSP_a4017c17aac9d3e96d0e821ebbe09da7b}{
+\index{CSP@{CSP}!setDomain@{setDomain}}
+\index{setDomain@{setDomain}!CSP@{CSP}}
+\subsubsection[{setDomain}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf CSP}$<$ T $>$::setDomain (size\_\-t {\em index}, \/  std::vector$<$ T $>$ {\em domain})}}
+\label{classCSP_a4017c17aac9d3e96d0e821ebbe09da7b}
+
+
+Set the domain for the i-\/th variable. 
+
+METHOD: setDomain 
+\begin{DoxyParams}{Parameters}
+\item[{\em index}]Variable for which we're setting the domain \item[{\em domain}]Vector containing the possible values for that variable \end{DoxyParams}
+\hypertarget{classCSP_ac25064c5b2d4e1020173b56913251ebd}{
+\index{CSP@{CSP}!setValue@{setValue}}
+\index{setValue@{setValue}!CSP@{CSP}}
+\subsubsection[{setValue}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf CSP}$<$ T $>$::setValue (size\_\-t {\em index}, \/  T {\em value})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classCSP_ac25064c5b2d4e1020173b56913251ebd}
+
+
+Set the value of a variable as a constraint. 
+
+METHOD: setValue 
+\begin{DoxyParams}{Parameters}
+\item[{\em index}]Index of the parameter to be set \item[{\em value}]Value to be set \end{DoxyParams}
+\hypertarget{classCSP_a4c0cae125a610f519dc22eaec255a0ae}{
+\index{CSP@{CSP}!unsetValue@{unsetValue}}
+\index{unsetValue@{unsetValue}!CSP@{CSP}}
+\subsubsection[{unsetValue}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf CSP}$<$ T $>$::unsetValue (size\_\-t {\em index})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classCSP_a4c0cae125a610f519dc22eaec255a0ae}
+
+
+Marks a variable as not set, and if a default value was assigned in the \hyperlink{classCSP}{CSP} constructor, this value will be set. By default, unless specified in the constructor, all the variables are considered as not set. 
+
+METHOD: unsetValue 
+\begin{DoxyParams}{Parameters}
+\item[{\em index}]Index of the variable to be unset \end{DoxyParams}
+
+
+The documentation for this class was generated from the following files:\begin{DoxyCompactItemize}
+\item 
+csp++.h\item 
+csp++.cpp\end{DoxyCompactItemize}
