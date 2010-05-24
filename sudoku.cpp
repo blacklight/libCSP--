@@ -240,7 +240,7 @@ main ( int argc, char *argv[] )
 		printSudoku(csp);
 	}
 
-	catch (char* msg)  {
+	catch (const char* msg)  {
 		cerr << "Exception: " << msg << endl;
 		return EXIT_FAILURE;
 	}
