@@ -4,13 +4,13 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-A	fourcolours.cpp	34;"	d	file:
-B	fourcolours.cpp	39;"	d	file:
+A	fourcolours.cpp	/^	I, CH, DK, D, A, F, E, P, B, L, NL$/;"	e	enum:__anon1	file:
+B	fourcolours.cpp	/^	I, CH, DK, D, A, F, E, P, B, L, NL$/;"	e	enum:__anon1	file:
 CC	Makefile	/^CC = g++$/;"	m
 CCFLAGS	Makefile	/^CCFLAGS = -O3 -g$/;"	m
-CH	fourcolours.cpp	33;"	d	file:
-COLOURS	fourcolours.cpp	45;"	d	file:
-COUNTRIES	fourcolours.cpp	44;"	d	file:
+CH	fourcolours.cpp	/^	I, CH, DK, D, A, F, E, P, B, L, NL$/;"	e	enum:__anon1	file:
+COLOURS	fourcolours.cpp	50;"	d	file:
+COUNTRIES	fourcolours.cpp	49;"	d	file:
 CSP	csp++.cpp	/^CSP<T>::CSP ( int n, T default_value, bool set_value, bool (*c)(std::vector< CSPvariable<T> >) )$/;"	f	class:CSP	signature:( int n, T default_value, bool set_value, bool (*c)(std::vector< CSPvariable<T> >) )
 CSP	csp++.cpp	/^CSP<T>::CSP (int n, bool (*c)(vector< CSPvariable<T> >))$/;"	f	class:CSP	signature:(int n, bool (*c)(vector< CSPvariable<T> >))
 CSP	csp++.h	/^	CSP ( int n, T default_value, bool set_variables = false, bool (*c)(std::vector< CSPvariable<T> >) = __default_constraint );$/;"	p	class:CSP	access:public	signature:( int n, T default_value, bool set_variables = false, bool (*c)(std::vector< CSPvariable<T> >) = __default_constraint )
@@ -34,10 +34,11 @@ CSP::appendConstraint	csp++.h	/^	void appendConstraint ( bool (*c)(std::vector< 
 CSP::arc	csp++.h	/^	struct arc  {$/;"	s	class:CSP	access:private
 CSP::arc::value	csp++.h	/^		TT value[2];$/;"	m	struct:CSP::arc	access:public
 CSP::arc::var	csp++.h	/^		CSPvariable<TT> var[2];$/;"	m	struct:CSP::arc	access:public
+CSP::assignUniqueDomains	csp++.cpp	/^CSP<T>::assignUniqueDomains ( void )$/;"	f	class:CSP	signature:( void )
+CSP::assignUniqueDomains	csp++.h	/^	void assignUniqueDomains ( void );$/;"	p	class:CSP	access:public	signature:( void )
 CSP::constraints	csp++.h	/^	std::vector< bool (*)(std::vector< CSPvariable<T> >) > constraints;$/;"	m	class:CSP	access:private
 CSP::dropConstraint	csp++.cpp	/^CSP<T>::dropConstraint ( size_t index )$/;"	f	class:CSP	signature:( size_t index )
 CSP::dropConstraint	csp++.h	/^	void dropConstraint ( size_t index );$/;"	p	class:CSP	access:public	signature:( size_t index )
-CSP::fixed	csp++.h	/^	std::vector<bool> fixed;$/;"	m	class:CSP	access:private
 CSP::getDomain	csp++.cpp	/^CSP<T>::getDomain ( size_t index )$/;"	f	class:CSP	signature:( size_t index )
 CSP::getDomain	csp++.h	/^	std::vector<T> getDomain ( size_t index );$/;"	p	class:CSP	access:public	signature:( size_t index )
 CSP::getSize	csp++.cpp	/^CSP<T>::getSize( void )$/;"	f	class:CSP	signature:( void )
@@ -46,6 +47,8 @@ CSP::hasUniqueSolution	csp++.cpp	/^CSP<T>::hasUniqueSolution ( void )$/;"	f	clas
 CSP::hasUniqueSolution	csp++.h	/^	bool hasUniqueSolution ( void );$/;"	p	class:CSP	access:public	signature:( void )
 CSP::isSatisfiable	csp++.cpp	/^CSP<T>::isSatisfiable ( void )$/;"	f	class:CSP	signature:( void )
 CSP::isSatisfiable	csp++.h	/^	bool isSatisfiable ( void );$/;"	p	class:CSP	access:public	signature:( void )
+CSP::isSet	csp++.cpp	/^CSP<T>::isSet ( size_t index )$/;"	f	class:CSP	signature:( size_t index )
+CSP::isSet	csp++.h	/^	bool isSet ( size_t i );$/;"	p	class:CSP	access:public	signature:( size_t i )
 CSP::refreshDomains	csp++.cpp	/^CSP<T>::refreshDomains ( void )$/;"	f	class:CSP	signature:( void )
 CSP::refreshDomains	csp++.h	/^	void refreshDomains( void );$/;"	p	class:CSP	access:public	signature:( void )
 CSP::restoreDomains	csp++.cpp	/^CSP<T>::restoreDomains ( void )$/;"	f	class:CSP	signature:( void )
@@ -62,6 +65,8 @@ CSP::setValue	csp++.cpp	/^CSP<T>::setValue ( size_t index, T value )$/;"	f	class
 CSP::setValue	csp++.h	/^	void setValue ( size_t index, T value );$/;"	p	class:CSP	access:public	signature:( size_t index, T value )
 CSP::unsetValue	csp++.cpp	/^CSP<T>::unsetValue ( size_t index )$/;"	f	class:CSP	signature:( size_t index )
 CSP::unsetValue	csp++.h	/^	void unsetValue ( size_t index );$/;"	p	class:CSP	access:public	signature:( size_t index )
+CSP::value	csp++.cpp	/^CSP<T>::value ( size_t index )$/;"	f	class:CSP	signature:( size_t index )
+CSP::value	csp++.h	/^	T value ( size_t i );$/;"	p	class:CSP	access:public	signature:( size_t i )
 CSP::variables	csp++.h	/^	std::vector< CSPvariable<T> > variables;$/;"	m	class:CSP	access:private
 CSPexception	csp++.h	/^	CSPexception (const char *m)  {$/;"	f	class:CSPexception	access:public	signature:(const char *m)
 CSPexception	csp++.h	/^class CSPexception : public std::exception  {$/;"	c	inherits:std::exception
@@ -79,25 +84,31 @@ Class Documentation	doc/latex/refman.tex	/^\\chapter{Class Documentation}$/;"	c
 Class Index	doc/latex/refman.tex	/^\\chapter{Class Index}$/;"	c
 Class List	doc/latex/annotated.tex	/^\\section{Class List}$/;"	s
 Classes	doc/latex/classCSP.tex	/^\\subsection*{Classes}$/;"	b
+Colour	fourcolours.cpp	/^} Colour;$/;"	t	typeref:enum:__anon2	file:
 Constructor Destructor Documentation	doc/latex/classCSP.tex	/^\\subsection{Constructor \\& Destructor Documentation}$/;"	b
-D	fourcolours.cpp	35;"	d	file:
-DK	fourcolours.cpp	42;"	d	file:
+Country	fourcolours.cpp	/^} Country;$/;"	t	typeref:enum:__anon1	file:
+D	fourcolours.cpp	/^	I, CH, DK, D, A, F, E, P, B, L, NL$/;"	e	enum:__anon1	file:
+DEFAULT_SUDOKU_FILE	sudoku.cpp	42;"	d	file:
+DK	fourcolours.cpp	/^	I, CH, DK, D, A, F, E, P, B, L, NL$/;"	e	enum:__anon1	file:
 Detailed Description	doc/latex/classCSP.tex	/^\\subsection{Detailed Description}$/;"	b
 Detailed Description	doc/latex/classCSPexception.tex	/^\\subsection{Detailed Description}$/;"	b
-E	fourcolours.cpp	37;"	d	file:
-F	fourcolours.cpp	36;"	d	file:
+E	fourcolours.cpp	/^	I, CH, DK, D, A, F, E, P, B, L, NL$/;"	e	enum:__anon1	file:
+F	fourcolours.cpp	/^	I, CH, DK, D, A, F, E, P, B, L, NL$/;"	e	enum:__anon1	file:
 FOURCOLOURS	Makefile	/^FOURCOLOURS = fourcolours$/;"	m
-I	fourcolours.cpp	32;"	d	file:
+HEIGHT	sudoku.cpp	40;"	d	file:
+I	fourcolours.cpp	/^	I, CH, DK, D, A, F, E, P, B, L, NL$/;"	e	enum:__anon1	file:
 INCLUDES	Makefile	/^INCLUDES = -I.$/;"	m
-L	fourcolours.cpp	40;"	d	file:
-NL	fourcolours.cpp	41;"	d	file:
+L	fourcolours.cpp	/^	I, CH, DK, D, A, F, E, P, B, L, NL$/;"	e	enum:__anon1	file:
+NL	fourcolours.cpp	/^	I, CH, DK, D, A, F, E, P, B, L, NL$/;"	e	enum:__anon1	file:
+NOVALUE	sudoku.cpp	41;"	d	file:
 OBJ	Makefile	/^OBJ = $(SRC:.cpp=.o)$/;"	m
 OUT	Makefile	/^OUT = libcsp++.a$/;"	m
-P	fourcolours.cpp	38;"	d	file:
+P	fourcolours.cpp	/^	I, CH, DK, D, A, F, E, P, B, L, NL$/;"	e	enum:__anon1	file:
 Public Attributes	doc/latex/structCSPvariable.tex	/^\\subsection*{Public Attributes}$/;"	b
 Public Member Functions	doc/latex/classCSP.tex	/^\\subsection*{Public Member Functions}$/;"	b
 Public Member Functions	doc/latex/classCSPexception.tex	/^\\subsection*{Public Member Functions}$/;"	b
-SRC	Makefile	/^SRC = csp++.cpp csp++-impl.cpp$/;"	m
+SRC	Makefile	/^SRC = csp++.cpp$/;"	m
+SUDOKU	Makefile	/^SUDOKU = sudoku$/;"	m
 SearchBox	doc/html/search/search.js	/^function SearchBox(name, resultsPath, inFrame, label)$/;"	c
 SearchBox.Activate	doc/html/search/search.js	/^  this.Activate = function(isActive)$/;"	m
 SearchBox.CloseResultsWindow	doc/html/search/search.js	/^  this.CloseResultsWindow = function()$/;"	m
@@ -127,6 +138,7 @@ SearchResults.NavPrev	doc/html/search/search.js	/^    this.NavPrev = function(in
 SearchResults.ProcessKeys	doc/html/search/search.js	/^    this.ProcessKeys = function(e)$/;"	m
 SearchResults.Search	doc/html/search/search.js	/^    this.Search = function(search)$/;"	m
 SearchResults.Toggle	doc/html/search/search.js	/^    this.Toggle = function(id)$/;"	m
+WIDTH	sudoku.cpp	39;"	d	file:
 __CSPPP_H	csp++.h	20;"	d
 __default_constraint	csp++.h	/^	static bool __default_constraint ( std::vector< CSPvariable<T> > v )  { return true; }$/;"	f	class:CSP	access:private	signature:( std::vector< CSPvariable<T> > v )
 __default_domains	csp++.h	/^	std::vector< std::vector<T> > __default_domains;$/;"	m	class:CSP	access:private
@@ -139,26 +151,30 @@ _details	doc/html/classCSPexception.html	/^<hr\/><a name="_details"><\/a><h2>Det
 appendConstraint	csp++.cpp	/^CSP<T>::appendConstraint ( bool (*c)(vector< CSPvariable<T> >))$/;"	f	class:CSP	signature:( bool (c)vector< CSPvariable<T> >))
 appendConstraint	csp++.h	/^	void appendConstraint ( bool (*c)(std::vector< CSPvariable<T> >) );$/;"	p	class:CSP	access:public	signature:( bool (c)std::vector< CSPvariable<T> >) )
 arc	csp++.h	/^	struct arc  {$/;"	s	class:CSP	access:private
-blue	fourcolours.cpp	29;"	d	file:
-colours	fourcolours.cpp	/^const char* colours[COLOURS] = {$/;"	v
+assignUniqueDomains	csp++.cpp	/^CSP<T>::assignUniqueDomains ( void )$/;"	f	class:CSP	signature:( void )
+assignUniqueDomains	csp++.h	/^	void assignUniqueDomains ( void );$/;"	p	class:CSP	access:public	signature:( void )
+blue	fourcolours.cpp	/^	red, green, blue, yellow$/;"	e	enum:__anon2	file:
+c	fourcolours.cpp	/^c ( std::vector< CSPvariable<Colour> > variables)  {$/;"	f	signature:( std::vector< CSPvariable<Colour> > variables)
+cellsConstraint	sudoku.cpp	/^cellsConstraint ( std::vector< CSPvariable<int> > variables)$/;"	f	signature:( std::vector< CSPvariable<int> > variables)
+colours	fourcolours.cpp	/^static const char* colours[COLOURS] = {$/;"	v	file:
+colsConstraint	sudoku.cpp	/^colsConstraint ( std::vector< CSPvariable<int> > variables)$/;"	f	signature:( std::vector< CSPvariable<int> > variables)
 constraint	csp++.h	66;"	d
-constraint	fourcolours.cpp	/^constraint ( std::vector< CSPvariable<int> > variables)  {$/;"	f	signature:( std::vector< CSPvariable<int> > variables)
 constraints	csp++.h	/^	std::vector< bool (*)(std::vector< CSPvariable<T> >) > constraints;$/;"	m	class:CSP	access:private
 convertToId	doc/html/search/search.js	/^function convertToId(search)$/;"	f
-countries	fourcolours.cpp	/^const char* countries[COUNTRIES] = {$/;"	v
+countries	fourcolours.cpp	/^static const char* countries[COUNTRIES] = {$/;"	v	file:
 domain	csp++.h	/^	std::vector<T> domain;$/;"	m	struct:CSPvariable	access:public
 dropConstraint	csp++.cpp	/^CSP<T>::dropConstraint ( size_t index )$/;"	f	class:CSP	signature:( size_t index )
 dropConstraint	csp++.h	/^	void dropConstraint ( size_t index );$/;"	p	class:CSP	access:public	signature:( size_t index )
 fixed	csp++.h	/^	bool fixed;$/;"	m	struct:CSPvariable	access:public
-fixed	csp++.h	/^	std::vector<bool> fixed;$/;"	m	class:CSP	access:private
 getDomain	csp++.cpp	/^CSP<T>::getDomain ( size_t index )$/;"	f	class:CSP	signature:( size_t index )
 getDomain	csp++.h	/^	std::vector<T> getDomain ( size_t index );$/;"	p	class:CSP	access:public	signature:( size_t index )
 getIndexByColour	fourcolours.cpp	/^getIndexByColour ( const char* colour )$/;"	f	signature:( const char* colour )
 getSize	csp++.cpp	/^CSP<T>::getSize( void )$/;"	f	class:CSP	signature:( void )
 getSize	csp++.h	/^	size_t getSize ( void );$/;"	p	class:CSP	access:public	signature:( void )
+getSudoku	sudoku.cpp	/^getSudoku (CSP<int>& csp, const char* sudokuFile)$/;"	f	signature:(CSP<int>& csp, const char* sudokuFile)
 getXPos	doc/html/search/search.js	/^function getXPos(item)$/;"	f
 getYPos	doc/html/search/search.js	/^function getYPos(item)$/;"	f
-green	fourcolours.cpp	28;"	d	file:
+green	fourcolours.cpp	/^	red, green, blue, yellow$/;"	e	enum:__anon2	file:
 hasUniqueSolution	csp++.cpp	/^CSP<T>::hasUniqueSolution ( void )$/;"	f	class:CSP	signature:( void )
 hasUniqueSolution	csp++.h	/^	bool hasUniqueSolution ( void );$/;"	p	class:CSP	access:public	signature:( void )
 index	csp++.h	/^	int index;$/;"	m	struct:CSPvariable	access:public
@@ -170,6 +186,8 @@ indexSectionsWithContent.1	doc/html/search/search.js	/^  1: "0000000000000000000
 indexSectionsWithContent.2	doc/html/search/search.js	/^  2: "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000101100111000000001101000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"$/;"	p
 isSatisfiable	csp++.cpp	/^CSP<T>::isSatisfiable ( void )$/;"	f	class:CSP	signature:( void )
 isSatisfiable	csp++.h	/^	bool isSatisfiable ( void );$/;"	p	class:CSP	access:public	signature:( void )
+isSet	csp++.cpp	/^CSP<T>::isSet ( size_t index )$/;"	f	class:CSP	signature:( size_t index )
+isSet	csp++.h	/^	bool isSet ( size_t i );$/;"	p	class:CSP	access:public	signature:( size_t i )
 l00001	doc/html/csp_09_09_8h_source.html	/^<h1>csp++.h<\/h1><div class="fragment"><pre class="fragment"><a name="l00001"><\/a>00001 <span class="comment">\/*<\/span>$/;"	a
 l00002	doc/html/csp_09_09_8h_source.html	/^<a name="l00002"><\/a>00002 <span class="comment"> * =====================================================================================<\/span>$/;"	a
 l00003	doc/html/csp_09_09_8h_source.html	/^<a name="l00003"><\/a>00003 <span class="comment"> *<\/span>$/;"	a
@@ -268,14 +286,17 @@ l00200	doc/html/csp_09_09_8h_source.html	/^<a name="l00200"><\/a>00200 $/;"	a
 latex_count	doc/latex/Makefile	/^	latex_count=5 ; \\$/;"	m
 letter_C	doc/html/classes.html	/^<tr><td><a name="letter_C"><\/a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&nbsp;&nbsp;C&nbsp;&nbsp;<\/div><\/td><\/tr><\/table>$/;"	a
 main	fourcolours.cpp	/^main ( int argc, char *argv[] )$/;"	f	signature:( int argc, char *argv[] )
+main	sudoku.cpp	/^main ( int argc, char *argv[] )$/;"	f	signature:( int argc, char *argv[] )
 message	csp++.h	/^	const char* message;$/;"	m	class:CSPexception	access:private
-printDomain	fourcolours.cpp	/^printDomain (CSP<int> csp, int variable)$/;"	f	signature:(CSP<int> csp, int variable)
-printDomains	fourcolours.cpp	/^printDomains (CSP<int> csp)$/;"	f	signature:(CSP<int> csp)
-red	fourcolours.cpp	27;"	d	file:
+printDomain	fourcolours.cpp	/^printDomain (CSP<Colour> csp, int variable)$/;"	f	signature:(CSP<Colour> csp, int variable)
+printDomains	fourcolours.cpp	/^printDomains (CSP<Colour> csp)$/;"	f	signature:(CSP<Colour> csp)
+printSudoku	sudoku.cpp	/^printSudoku (CSP<int> csp)$/;"	f	signature:(CSP<int> csp)
+red	fourcolours.cpp	/^	red, green, blue, yellow$/;"	e	enum:__anon2	file:
 refreshDomains	csp++.cpp	/^CSP<T>::refreshDomains ( void )$/;"	f	class:CSP	signature:( void )
 refreshDomains	csp++.h	/^	void refreshDomains( void );$/;"	p	class:CSP	access:public	signature:( void )
 restoreDomains	csp++.cpp	/^CSP<T>::restoreDomains ( void )$/;"	f	class:CSP	signature:( void )
 restoreDomains	csp++.h	/^	void restoreDomains ( void );$/;"	p	class:CSP	access:private	signature:( void )
+rowsConstraint	sudoku.cpp	/^rowsConstraint ( std::vector< CSPvariable<int> > variables)$/;"	f	signature:( std::vector< CSPvariable<int> > variables)
 setConstraint	csp++.cpp	/^CSP<T>::setConstraint ( bool (*c)(vector< CSPvariable<T> >))$/;"	f	class:CSP	signature:( bool (c)vector< CSPvariable<T> >))
 setConstraint	csp++.cpp	/^CSP<T>::setConstraint ( std::vector< bool(*)(std::vector< CSPvariable<T> >) > c )$/;"	f	class:CSP	signature:( std::vector< bool(*)(std::vector< CSPvariable<T> >) > c )
 setConstraint	csp++.h	/^	void setConstraint ( bool (*c)(std::vector< CSPvariable<T> >) );$/;"	p	class:CSP	access:public	signature:( bool (c)std::vector< CSPvariable<T> >) )
@@ -288,13 +309,16 @@ setValue	csp++.cpp	/^CSP<T>::setValue ( size_t index, T value )$/;"	f	class:CSP	
 setValue	csp++.h	/^	void setValue ( size_t index, T value );$/;"	p	class:CSP	access:public	signature:( size_t index, T value )
 template$ $class T$ $ class CSP$ $ T $ $	doc/latex/classCSP.tex	/^\\subsubsection*{template$<$class T$>$ class CSP$<$ T $>$}$/;"	b
 template$ $class T$ $ struct CSPvariable$ $ T $ $	doc/latex/structCSPvariable.tex	/^\\subsubsection*{template$<$class T$>$ struct CSPvariable$<$ T $>$}$/;"	b
+toID	sudoku.cpp	/^toID (int i, int j)$/;"	f	signature:(int i, int j)
 unsetValue	csp++.cpp	/^CSP<T>::unsetValue ( size_t index )$/;"	f	class:CSP	signature:( size_t index )
 unsetValue	csp++.h	/^	void unsetValue ( size_t index );$/;"	p	class:CSP	access:public	signature:( size_t index )
 usage	doc/html/installdox	/^sub usage {$/;"	s
+value	csp++.cpp	/^CSP<T>::value ( size_t index )$/;"	f	class:CSP	signature:( size_t index )
 value	csp++.h	/^		TT value[2];$/;"	m	struct:CSP::arc	access:public
+value	csp++.h	/^	T value ( size_t i );$/;"	p	class:CSP	access:public	signature:( size_t i )
 value	csp++.h	/^	T value;$/;"	m	struct:CSPvariable	access:public
-valueOK	fourcolours.cpp	/^valueOK ( CSP<int> csp, size_t variable, int value )  {$/;"	f	signature:( CSP<int> csp, size_t variable, int value )
+valueOK	fourcolours.cpp	/^valueOK ( CSP<Colour> csp, size_t variable, Colour value )  {$/;"	f	signature:( CSP<Colour> csp, size_t variable, Colour value )
 var	csp++.h	/^		CSPvariable<TT> var[2];$/;"	m	struct:CSP::arc	access:public
 variables	csp++.h	/^	std::vector< CSPvariable<T> > variables;$/;"	m	class:CSP	access:private
 what	csp++.h	/^	virtual const char* what()  {$/;"	f	class:CSPexception	access:public	signature:()
-yellow	fourcolours.cpp	30;"	d	file:
+yellow	fourcolours.cpp	/^	red, green, blue, yellow$/;"	e	enum:__anon2	file:

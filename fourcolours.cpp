@@ -11,6 +11,7 @@
  *       Compiler:  gcc
  *
  *         Author:  BlackLight (http://0x00.ath.cx), <blacklight@autistici.org>
+ *        Licence:  GNU GPL v.3
  *        Company:  lulz
  *
  * =====================================================================================
@@ -21,36 +22,23 @@
 #include	<vector>
 #include	<cstdlib>
 #include  <cstring>
-#include	"csp++.h"
-
-// Yes, I know it looks stupid, but ask C++ standard developers about this.
-// C++ can't expand template class code until a type is explicitely specified.
-// This is nearly like not using templates at all, but join me in asking C++
-// compilers developers to massively allow the export keyword and change the
-// way templates are managed. Until that moment, you must always include the
-// .cpp file of the library inside your source code as well, and specify later
-// the types you're going to use this template class for
-#include  "csp++.cpp"
+#include	<csp++/csp++.h>
 
 using namespace std;
 
 typedef enum  {
-	I, CH, A, D, F, E, P, B, L, NL, DK
+	I, CH, DK, D, A, F, E, P, B, L, NL
 } Country;
 
 typedef enum  {
 	red, green, blue, yellow
 } Colour;
 
-// We're going to specify the types we'll use the CSP class for. in our case,
-// the CSP will manage the colours of the countries
-template class CSP<Colour>;
-
 #define 	COUNTRIES 	11
 #define 	COLOURS 		4
 
 static const char* countries[COUNTRIES] = {
-	"Italy", "Switz.", "Austria", "Germany", "France", "Spain", "Portugal", "Belgium", "Luxemb.", "Holland", "Denmark"
+	"Italy", "Switz.", "Denmark", "Germany", "Austria", "France", "Spain", "Portugal", "Belgium", "Luxemb.", "Holland"
 };
 
 static const char* colours[COLOURS] = {

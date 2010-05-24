@@ -1,0 +1,96 @@
+========================================
+ _ _ _      ____ ____  ____             
+| (_) |__  / ___/ ___||  _ \  _     _   
+| | | '_ \| |   \___ \| |_) || |_ _| |_ 
+| | | |_) | |___ ___) |  __/_   _|_   _|
+|_|_|_.__/ \____|____/|_|    |_|   |_|  
+========================================
+
+
+libCSP++ is a small library whose purpose is allowing the programmer who has to
+manage constraint-related problems (CSP == Constraint Satisfaction Problem), in
+artificial intelligence or any other application, to do it easily, just caring
+about how to express the constraints of his own problem, not how to write an
+algorithm that verifies those constraints. The programmer only has to focus
+three parameters: the variables of the problem (e.g., in a sudoku resolution 
+algorithm, each cell of the game may represent a variable), the domains of these
+variables (e.g., in a sudoku, each cell may assume values from 1 to 9) and the
+constraints of the problem, simply provided like one or more boolean functions
+(always in a sudoku, the constraints are represented by a boolean function
+returning true if all the variables in the same row, column and cell have
+different values, false otherwise). Once focused these features, the programmer
+just has to provide them to build a CSP object, without caring of the algorithm
+to check the satisfiability of his problem, and so pay his attention to *HIS*
+own algorithm.
+
+
+INSTALLATION:
+
+Just type make install. The files will be copied, by default, to /usr/local.
+Change the Makefile if you want them in a different location. No additional
+dependency is required. Only a C++ compiler.
+
+
+USAGE:
+
+Just include <csp++/csp++.h> in your source files using libCSP++, possibly
+adding the directory where csp++ directory is located to your include list (for
+example, using g++ and supposing you installed csp++ to /usr/local, you would
+append -I/usr/local/include to your compiler command line).
+
+
+DOCUMENTATION:
+
+You can find doxygen-generated documentation, both in HTML and LaTeX format, in
+the doc/ directory of the project. If you modify some of the sources files of
+the library and want to change the documentation, just move to csp++ directory
+and launch `doxygen' command again.
+
+
+EXAMPLES:
+
+Two examples of usage of the library are provided.
+
+- fourcolours.cpp is a simple application whose purpose is to interactively ask the
+user to enter the colours for some European countries. The constraint is that two
+adjacent countries on the map cannot have the same colour, and the domain of
+each variable (country) is the set of colours it can assume (a set of 4 colours
+is used, it has been proved in the chromatic theory of graphs that 4 colours are
+enough for satisfying the constraint "two adjacent countries must always have
+different colours"). Every time the user inserts the colour for a country, the
+domains (colours) of the remaining countries are computed again applying the
+constraint just entered by the user, and for the next countries the choice of
+the colours is only restricted to these computed domains. If the user has to
+choose a colour for a country having an only value left in its domain, that
+value will be chosen automatically.
+
+- sudoku.cpp is a nice program that automatically solves a sudoku, theoretically by
+any size (in truth the complexity of the algorithm rises exponentially when the
+size of the sudoku grows, and the required time for the algorithm is also
+inversely proportional to the number of variables already set by default in the
+game). The sudoku to be solved is read by a text file. If no file is provided,
+the program reads the sudoku contained in ./sudoku.txt. More examples are
+provided in files sudoku-easy.txt, sudoku-medium.txt, sudoku-hard.txt and
+sudoku-2x2x2.txt. If you want to solve a sudoku different by the one provided in
+sudoku.txt, just put the new sudoku in a file whose structure is similar to the
+one illustrated in the sample files, and pass it as parameter for the
+application (e.g. ./sudoku mysudoku.txt). The application will verify whether
+the given game has a solution (unique), is indeterminate (the given variables
+are not enough for reaching a unique solution) or impossible (any configuration
+leads to a violation of the constraints).
+
+For building the examples, from the root directory of the project just type
+`make examples'. For removing them, type `make examples-clean'. For building
+only one of them, type `make fourcolours' or `make sudoku', and specularly `make
+fourcolours-clean' or `make sudoku-clean'.
+
+
+LICENCE:
+
+All the source code and examples are released under GNU GPL 3 licence.
+
+
+AUTHOR:
+
+BlackLight, <blacklight[AT]autistici[DOT]org>, http://0x00.ath.cx
+

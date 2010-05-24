@@ -1,0 +1,16 @@
+#
+# sudoku.txt - Sample sudoky 2x2x2 that our program can understand
+# Place a zero to identify an unset cell (that, of course, should
+# be set by our smart program).
+#
+# by BlackLight
+#
+
++-----+-----+
+| 1 0 | 3 0 |
+| 0 2 | 0 0 |
++-----+-----+
+| 2 0 | 0 0 |
+| 0 0 | 0 1 |
++-----+-----+
+

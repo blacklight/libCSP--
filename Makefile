@@ -1,31 +1,31 @@
-SRC = csp++.cpp
-OBJ = $(SRC:.cpp=.o)
-OUT = libcsp++.a
 INCLUDES = -I.
 CCFLAGS = -O3 -g
 CC = g++
 FOURCOLOURS = fourcolours
+SUDOKU = sudoku
+SUFFIX = .cpp
+INCLUDEDIR=csp++
+INSTALLDIR=/usr/local
 
-.SUFFIXES: .cpp
+examples: fourcolours sudoku
 
-.cpp.o:
-	$(CC) $(INCLUDES) $(CCFLAGS) -c $< -o $@
+examples-clean: fourcolours-clean sudoku-clean
 
-$(OUT): $(OBJ)
-	ar rcs $(OUT) $(OBJ)
-
-depend: dep
-
-dep:
-	makedepend -- $(CFLAGS) -- $(INCLUDES) $(SRC)
-
-clean:
-	rm -f $(OBJ) $(OUT) $(EXAMPLE)
+install:
+	mkdir -p ${INSTALLDIR}/include
+	mkdir -p ${INSTALLDIR}/include/${INCLUDEDIR}
+	cp ${INCLUDEDIR}/csp++-def.h ${INSTALLDIR}/include/${INCLUDEDIR}
+	cp ${INCLUDEDIR}/csp++.h ${INSTALLDIR}/include/${INCLUDEDIR}
+	cp ${INCLUDEDIR}/csp++.cpp ${INSTALLDIR}/include/${INCLUDEDIR}
 
 fourcolours:
-	$(CC) $(INCLUDES) $(CCFLAGS) -o $(FOURCOLOURS) $(FOURCOLOURS).cpp $(OUT)
+	$(CC) $(INCLUDES) $(CCFLAGS) -o $(FOURCOLOURS) $(FOURCOLOURS)${SUFFIX}
 
-examples: fourcolours
+sudoku:
+	$(CC) $(INCLUDES) $(CCFLAGS) -o $(SUDOKU) $(SUDOKU)${SUFFIX}
 
-clean-examples:
+fourcolours-clean:
 	rm ${FOURCOLOURS}
+
+sudoku-clean:
+	rm ${SUDOKU}
