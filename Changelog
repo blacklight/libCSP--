@@ -1,0 +1,10 @@
+thu may 27 11:43:04 CEST 2010   BlackLight   <blacklight@autistici.org>
+	* Release 0.1.1
+	* Changed name method `getSize()' -> `size()'
+	* Changed name method `getDomain()' -> `domain()'
+	* Added `solve()' method, applying `refreshDomain()' until a fixed
+	point is reached
+	* doxygen regenerated
+
+mon may 24 02:40:23 CEST 2010   BlackLight   <blacklight@autistici.org>
+	* Release 0.1
