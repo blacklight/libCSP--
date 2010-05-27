@@ -5,7 +5,7 @@
  *
  *    Description:  
  *
- *        Version:  0.1
+ *        Version:  0.1.1
  *        Created:  17/05/2010 09:17:13
  *       Revision:  none
  *       Compiler:  gcc
@@ -209,7 +209,7 @@ CSP<T>::refreshDomains ( void )
 
 template<class T>
 std::vector<T>
-CSP<T>::getDomain ( size_t index )
+CSP<T>::domain ( size_t index )
 {
 	if (index >= variables.size())
 		throw CSPexception("Index out of range");
@@ -219,7 +219,7 @@ CSP<T>::getDomain ( size_t index )
 
 template<class T>
 size_t
-CSP<T>::getSize( void )
+CSP<T>::size( void )
 {
 	return variables.size();
 }
@@ -275,9 +275,9 @@ template<class T>
 void
 CSP<T>::assignUniqueDomains ( void )
 {
-	for ( int i=0; i < getSize(); i++ )  {
-		if (getDomain(i).size() == 1)
-			setValue( i, getDomain(i)[0] );
+	for ( int i=0; i < size(); i++ )  {
+		if (domain(i).size() == 1)
+			setValue( i, domain(i)[0] );
 	}
 }
 
@@ -299,5 +299,43 @@ CSP<T>::value ( size_t index )
 		throw CSPexception("Index out of range");
 
 	return variables[index].value;
+}
+
+template<class T>
+void
+CSP<T>::solve ( size_t max_iterations )
+{
+	bool   changed = false;
+	size_t steps = 1;
+	vector< vector<T> > oldDomains(size());
+
+	do  {
+		if (max_iterations != 0)  {
+			if (steps++ > max_iterations)
+				break;
+		}
+
+		for ( size_t i=0; i < size(); i++ )  {
+			oldDomains[i] = variables[i].domain;
+		}
+		
+		refreshDomains();
+		assignUniqueDomains();
+
+		if (hasUniqueSolution())
+			break;
+
+		changed = false;
+
+		for ( size_t i=0; i < size(); i++ )  {
+			if (domain(i).size() != oldDomains[i].size())
+				changed = true;
+
+			for ( size_t j=0; j < domain(i).size() && !changed; j++ ) {
+				if ( domain(i)[j] != oldDomains[i][j] )
+					changed = true;
+			}
+		}
+	} while (changed);
 }
 

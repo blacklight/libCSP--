@@ -48,112 +48,117 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00006"></a>00006 <span class="comment"> *    Description:  Header file containing the CSP class definition. Never include this</span>
 <a name="l00007"></a>00007 <span class="comment"> *                  file directly in your sources. Include csp++.h instead.</span>
 <a name="l00008"></a>00008 <span class="comment"> *</span>
-<a name="l00009"></a>00009 <span class="comment"> *        Version:  1.0</span>
+<a name="l00009"></a>00009 <span class="comment"> *        Version:  0.1</span>
 <a name="l00010"></a>00010 <span class="comment"> *        Created:  16/05/2010 23:16:42</span>
 <a name="l00011"></a>00011 <span class="comment"> *       Revision:  none</span>
 <a name="l00012"></a>00012 <span class="comment"> *       Compiler:  gcc</span>
 <a name="l00013"></a>00013 <span class="comment"> *</span>
 <a name="l00014"></a>00014 <span class="comment"> *         Author:  BlackLight (http://0x00.ath.cx), &lt;blacklight@autistici.org&gt;</span>
-<a name="l00015"></a>00015 <span class="comment"> *        Company:  lulz</span>
-<a name="l00016"></a>00016 <span class="comment"> *</span>
-<a name="l00017"></a>00017 <span class="comment"> * =====================================================================================</span>
-<a name="l00018"></a>00018 <span class="comment"> */</span>
-<a name="l00019"></a>00019 
-<a name="l00020"></a>00020 <span class="preprocessor">#ifndef __CSPPP_H</span>
-<a name="l00021"></a>00021 <span class="preprocessor"></span><span class="preprocessor">#define __CSPPP_H</span>
-<a name="l00022"></a>00022 <span class="preprocessor"></span>
-<a name="l00023"></a>00023 <span class="preprocessor">#ifndef __CSPPP_CPP</span>
-<a name="l00024"></a>00024 <span class="preprocessor"></span><span class="preprocessor">#error  &quot;csp++-def.h must not be included directly - include csp++.h instead&quot;</span>
-<a name="l00025"></a>00025 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
-<a name="l00026"></a>00026 <span class="preprocessor"></span>
-<a name="l00027"></a>00027 <span class="preprocessor">#include        &lt;vector&gt;</span>
-<a name="l00028"></a>00028 <span class="preprocessor">#include        &lt;exception&gt;</span>
-<a name="l00029"></a>00029 
-<a name="l00034"></a>00034 <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;
-<a name="l00035"></a><a class="code" href="structCSPvariable.html">00035</a> <span class="keyword">struct </span><a class="code" href="structCSPvariable.html" title="Struct used for describing a variable in the CSP.">CSPvariable</a>  {
-<a name="l00037"></a><a class="code" href="structCSPvariable.html#a1fb7622b0576133aa9a2445da22fddac">00037</a>         <span class="keywordtype">int</span> <a class="code" href="structCSPvariable.html#a1fb7622b0576133aa9a2445da22fddac" title="Index of the variable.">index</a>;
-<a name="l00038"></a>00038         
-<a name="l00040"></a><a class="code" href="structCSPvariable.html#a8e7a1cbd9af27e295508794f871dc599">00040</a>         <span class="keywordtype">bool</span> <a class="code" href="structCSPvariable.html#a8e7a1cbd9af27e295508794f871dc599" title="If the value of the variable is set explicitely, this value is true.">fixed</a>;
+<a name="l00015"></a>00015 <span class="comment"> *        Licence:  GNU GPL v.3</span>
+<a name="l00016"></a>00016 <span class="comment"> *        Company:  lulz</span>
+<a name="l00017"></a>00017 <span class="comment"> *</span>
+<a name="l00018"></a>00018 <span class="comment"> * =====================================================================================</span>
+<a name="l00019"></a>00019 <span class="comment"> */</span>
+<a name="l00020"></a>00020 
+<a name="l00021"></a>00021 <span class="preprocessor">#ifndef __CSPPP_H</span>
+<a name="l00022"></a>00022 <span class="preprocessor"></span><span class="preprocessor">#define __CSPPP_H</span>
+<a name="l00023"></a>00023 <span class="preprocessor"></span>
+<a name="l00024"></a>00024 <span class="preprocessor">#ifndef __CSPPP_CPP</span>
+<a name="l00025"></a>00025 <span class="preprocessor"></span><span class="preprocessor">#error  &quot;csp++-def.h must not be included directly - include csp++.h instead&quot;</span>
+<a name="l00026"></a>00026 <span class="preprocessor"></span><span class="preprocessor">#endif</span>
+<a name="l00027"></a>00027 <span class="preprocessor"></span>
+<a name="l00028"></a>00028 <span class="preprocessor">#define  __CSPPP_VERSION        &quot;0.1&quot;</span>
+<a name="l00029"></a>00029 <span class="preprocessor"></span>
+<a name="l00030"></a>00030 <span class="preprocessor">#include        &lt;vector&gt;</span>
+<a name="l00031"></a>00031 <span class="preprocessor">#include        &lt;exception&gt;</span>
+<a name="l00032"></a>00032 
+<a name="l00037"></a>00037 <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;
+<a name="l00038"></a><a class="code" href="structCSPvariable.html">00038</a> <span class="keyword">struct </span><a class="code" href="structCSPvariable.html" title="Struct used for describing a variable in the CSP.">CSPvariable</a>  {
+<a name="l00040"></a><a class="code" href="structCSPvariable.html#a1fb7622b0576133aa9a2445da22fddac">00040</a>         <span class="keywordtype">int</span> <a class="code" href="structCSPvariable.html#a1fb7622b0576133aa9a2445da22fddac" title="Index of the variable.">index</a>;
 <a name="l00041"></a>00041         
-<a name="l00043"></a><a class="code" href="structCSPvariable.html#acc2ff31b449351f04b1c3a2a096e584c">00043</a>         T <a class="code" href="structCSPvariable.html#acc2ff31b449351f04b1c3a2a096e584c" title="The value of the variable.">value</a>;
+<a name="l00043"></a><a class="code" href="structCSPvariable.html#a8e7a1cbd9af27e295508794f871dc599">00043</a>         <span class="keywordtype">bool</span> <a class="code" href="structCSPvariable.html#a8e7a1cbd9af27e295508794f871dc599" title="If the value of the variable is set explicitely, this value is true.">fixed</a>;
 <a name="l00044"></a>00044         
-<a name="l00046"></a><a class="code" href="structCSPvariable.html#a66cf86ebf0fbbf8e571d7b585c9528a2">00046</a>         std::vector&lt;T&gt; <a class="code" href="structCSPvariable.html#a66cf86ebf0fbbf8e571d7b585c9528a2" title="Domain of the variable, declared as a vector.">domain</a>;
-<a name="l00047"></a>00047 };
-<a name="l00048"></a>00048 
-<a name="l00053"></a><a class="code" href="classCSPexception.html">00053</a> <span class="keyword">class </span><a class="code" href="classCSPexception.html" title="Class for managing exception in CSP.">CSPexception</a> : <span class="keyword">public</span> std::exception  {
-<a name="l00054"></a>00054         <span class="keyword">const</span> <span class="keywordtype">char</span>* message;
-<a name="l00055"></a>00055 
-<a name="l00056"></a>00056 <span class="keyword">public</span>:
-<a name="l00061"></a><a class="code" href="classCSPexception.html#a810bcfbb11d2e35d7b95f1e2b11b408c">00061</a>         <a class="code" href="classCSPexception.html#a810bcfbb11d2e35d7b95f1e2b11b408c" title="Constructor.">CSPexception</a> (<span class="keyword">const</span> <span class="keywordtype">char</span> *m)  {
-<a name="l00062"></a>00062                 message = m;
-<a name="l00063"></a>00063         }
-<a name="l00064"></a>00064 
-<a name="l00068"></a><a class="code" href="classCSPexception.html#a7013e90a6c26ba4c15bc6fbc42be02ef">00068</a>         <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classCSPexception.html#a7013e90a6c26ba4c15bc6fbc42be02ef" title="Return the description of the exception.">what</a>()  {
-<a name="l00069"></a>00069                 <span class="keywordflow">return</span> message;
-<a name="l00070"></a>00070         }
-<a name="l00071"></a>00071 };
-<a name="l00072"></a>00072 
-<a name="l00077"></a>00077 <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;
-<a name="l00078"></a><a class="code" href="classCSP.html">00078</a> <span class="keyword">class </span><a class="code" href="classCSP.html" title="Main class for managing a CSP.">CSP</a>  {
-<a name="l00079"></a>00079 <span class="keyword">private</span>:
-<a name="l00080"></a>00080         <span class="keyword">template</span>&lt;<span class="keyword">class</span> TT&gt;
-<a name="l00081"></a>00081         <span class="keyword">struct </span>arc  {
-<a name="l00082"></a>00082                 <a class="code" href="structCSPvariable.html">CSPvariable&lt;TT&gt;</a> var[2];
-<a name="l00083"></a>00083                 TT <a class="code" href="classCSP.html#aafa5e1a65d6c5d80780437d8d684f32a" title="Get the value of the i-th variable of the CSP. Be careful: before using this function...">value</a>[2];
-<a name="l00084"></a>00084         };
-<a name="l00085"></a>00085 
-<a name="l00086"></a>00086         std::vector&lt; CSPvariable&lt;T&gt; &gt; variables;
-<a name="l00087"></a>00087         std::vector&lt; bool (*)(std::vector&lt; CSPvariable&lt;T&gt; &gt;) &gt; constraints;
-<a name="l00088"></a>00088 <span class="preprocessor">        #define         constraint      constraints[0]</span>
-<a name="l00089"></a>00089 <span class="preprocessor"></span>
-<a name="l00090"></a>00090         std::vector&lt; std::vector&lt;T&gt; &gt; __default_domains;
-<a name="l00091"></a>00091         T __default_value;
-<a name="l00092"></a>00092         <span class="keywordtype">bool</span> __has_default_value;
-<a name="l00093"></a>00093         <span class="keyword">static</span> <span class="keywordtype">bool</span> __default_constraint ( std::vector&lt; <a class="code" href="structCSPvariable.html" title="Struct used for describing a variable in the CSP.">CSPvariable&lt;T&gt;</a> &gt; v )  { <span class="keywordflow">return</span> <span class="keyword">true</span>; }
-<a name="l00094"></a>00094         <span class="keywordtype">void</span> __init ( <span class="keywordtype">int</span> n, <span class="keywordtype">bool</span> (*c)(std::vector&lt; <a class="code" href="structCSPvariable.html" title="Struct used for describing a variable in the CSP.">CSPvariable&lt;T&gt;</a> &gt;) );
-<a name="l00095"></a>00095         <span class="keywordtype">void</span> restoreDomains ( <span class="keywordtype">void</span> );
-<a name="l00096"></a>00096 
-<a name="l00097"></a>00097 <span class="keyword">public</span>:
-<a name="l00102"></a><a class="code" href="classCSP.html#a3a4c1cfab4f5c2376b5f9da588e73f5a">00102</a>         <a class="code" href="classCSP.html#a3a4c1cfab4f5c2376b5f9da588e73f5a" title="Empty constructor - just do nothing, used for declaring an object and initialize...">CSP</a>()  {}
-<a name="l00103"></a>00103         
-<a name="l00113"></a>00113         <a class="code" href="classCSP.html#a3a4c1cfab4f5c2376b5f9da588e73f5a" title="Empty constructor - just do nothing, used for declaring an object and initialize...">CSP</a> ( <span class="keywordtype">int</span> n, <span class="keywordtype">bool</span> (*c)(std::vector&lt; <a class="code" href="structCSPvariable.html" title="Struct used for describing a variable in the CSP.">CSPvariable&lt;T&gt;</a> &gt;) = __default_constraint );
-<a name="l00114"></a>00114 
-<a name="l00128"></a>00128         <a class="code" href="classCSP.html#a3a4c1cfab4f5c2376b5f9da588e73f5a" title="Empty constructor - just do nothing, used for declaring an object and initialize...">CSP</a> ( <span class="keywordtype">int</span> n, T default_value, <span class="keywordtype">bool</span> set_variables = <span class="keyword">false</span>, <span class="keywordtype">bool</span> (*c)(std::vector&lt; <a class="code" href="structCSPvariable.html" title="Struct used for describing a variable in the CSP.">CSPvariable&lt;T&gt;</a> &gt;) = __default_constraint );
-<a name="l00129"></a>00129 
-<a name="l00135"></a>00135         <span class="keywordtype">void</span> <a class="code" href="classCSP.html#a4017c17aac9d3e96d0e821ebbe09da7b" title="Set the domain for the i-th variable.">setDomain</a> ( <span class="keywordtype">size_t</span> index, std::vector&lt;T&gt; domain );
-<a name="l00136"></a>00136 
-<a name="l00143"></a>00143         <span class="keywordtype">void</span> <a class="code" href="classCSP.html#a4017c17aac9d3e96d0e821ebbe09da7b" title="Set the domain for the i-th variable.">setDomain</a> ( <span class="keywordtype">size_t</span> index, T domain[], <span class="keywordtype">int</span> size );
-<a name="l00144"></a>00144 
-<a name="l00149"></a>00149         <span class="keywordtype">void</span> <a class="code" href="classCSP.html#a534a0d9bd10fb544f94196bf3c386657" title="Apply the constraint to the CSP as a boolean function.">setConstraint</a> ( <span class="keywordtype">bool</span> (*c)(std::vector&lt; <a class="code" href="structCSPvariable.html" title="Struct used for describing a variable in the CSP.">CSPvariable&lt;T&gt;</a> &gt;) );
-<a name="l00150"></a>00150 
-<a name="l00156"></a>00156         <span class="keywordtype">void</span> <a class="code" href="classCSP.html#a534a0d9bd10fb544f94196bf3c386657" title="Apply the constraint to the CSP as a boolean function.">setConstraint</a> ( std::vector&lt; <span class="keywordtype">bool</span>(*)(std::vector&lt; <a class="code" href="structCSPvariable.html" title="Struct used for describing a variable in the CSP.">CSPvariable&lt;T&gt;</a> &gt;) &gt; c );
-<a name="l00157"></a>00157 
-<a name="l00162"></a>00162         <span class="keywordtype">void</span> <a class="code" href="classCSP.html#a0231b93bceae257f0e1c35041f8fe63f" title="Drops a constraint from the CSP.">dropConstraint</a> ( <span class="keywordtype">size_t</span> index );
-<a name="l00163"></a>00163 
-<a name="l00168"></a>00168         <span class="keywordtype">void</span> <a class="code" href="classCSP.html#a8dc6aec6ca7e40d198e58b0ec14fee66" title="Append a constraint to the list of the constraint of the CSP.">appendConstraint</a> ( <span class="keywordtype">bool</span> (*c)(std::vector&lt; <a class="code" href="structCSPvariable.html" title="Struct used for describing a variable in the CSP.">CSPvariable&lt;T&gt;</a> &gt;) );
-<a name="l00169"></a>00169 
-<a name="l00173"></a>00173         <span class="keywordtype">void</span> <a class="code" href="classCSP.html#a466845256e638c5e258fd728b641359f" title="Updates the domains of the variables. Any constraint or node fixed value is applied...">refreshDomains</a>( <span class="keywordtype">void</span> );
-<a name="l00174"></a>00174 
-<a name="l00180"></a>00180         std::vector&lt;T&gt; <a class="code" href="classCSP.html#a2a9a7d8072613f6984795d5495373847" title="Get the domain of the i-th variable.">getDomain</a> ( <span class="keywordtype">size_t</span> index );
-<a name="l00181"></a>00181 
-<a name="l00186"></a>00186         <span class="keywordtype">size_t</span> <a class="code" href="classCSP.html#a91a0e89bc1882d39b88122bee392c5f3" title="Get the number of variables in the current CSP.">getSize</a> ( <span class="keywordtype">void</span> );
-<a name="l00187"></a>00187         
-<a name="l00193"></a>00193         <span class="keywordtype">void</span> <a class="code" href="classCSP.html#ac25064c5b2d4e1020173b56913251ebd" title="Set the value of a variable as a constraint.">setValue</a> ( <span class="keywordtype">size_t</span> index, T <a class="code" href="classCSP.html#aafa5e1a65d6c5d80780437d8d684f32a" title="Get the value of the i-th variable of the CSP. Be careful: before using this function...">value</a> );
-<a name="l00194"></a>00194 
-<a name="l00202"></a>00202         <span class="keywordtype">void</span> <a class="code" href="classCSP.html#a4c0cae125a610f519dc22eaec255a0ae" title="Marks a variable as not set, and if a default value was assigned in the CSP constructor...">unsetValue</a> ( <span class="keywordtype">size_t</span> index );
-<a name="l00203"></a>00203 
-<a name="l00208"></a>00208         <span class="keywordtype">bool</span> <a class="code" href="classCSP.html#a7ef9eb91c38815c9d82182696a6bd5d3" title="Check if the current CSP, with the applied constraints, is satisfiable.">isSatisfiable</a> ( <span class="keywordtype">void</span> );
-<a name="l00209"></a>00209 
-<a name="l00216"></a>00216         <span class="keywordtype">bool</span> <a class="code" href="classCSP.html#ae96286c6c7dfb6fe077544e0d4af15f4" title="Check if the CSP, with the given variables, domains and constraints, admits a unique...">hasUniqueSolution</a> ( <span class="keywordtype">void</span> );
-<a name="l00217"></a>00217 
-<a name="l00223"></a>00223         <span class="keywordtype">void</span> <a class="code" href="classCSP.html#ac74cb751589a58bf6f2815f6878d2213" title="Check if any of the variables in the CSP has a domain containing an only item. If...">assignUniqueDomains</a> ( <span class="keywordtype">void</span> );
-<a name="l00229"></a>00229         <span class="keywordtype">bool</span> <a class="code" href="classCSP.html#a213dafc1aae7b1825371810a511eca4f" title="Check if the i-th variable in the CSP has a fixed value.">isSet</a> ( <span class="keywordtype">size_t</span> i );
-<a name="l00230"></a>00230 
-<a name="l00240"></a>00240         T <a class="code" href="classCSP.html#aafa5e1a65d6c5d80780437d8d684f32a" title="Get the value of the i-th variable of the CSP. Be careful: before using this function...">value</a> ( <span class="keywordtype">size_t</span> i );
-<a name="l00241"></a>00241 };
-<a name="l00242"></a>00242 
-<a name="l00243"></a>00243 <span class="preprocessor">#endif</span>
-<a name="l00244"></a>00244 <span class="preprocessor"></span>
+<a name="l00046"></a><a class="code" href="structCSPvariable.html#acc2ff31b449351f04b1c3a2a096e584c">00046</a>         T <a class="code" href="structCSPvariable.html#acc2ff31b449351f04b1c3a2a096e584c" title="The value of the variable.">value</a>;
+<a name="l00047"></a>00047         
+<a name="l00049"></a><a class="code" href="structCSPvariable.html#a66cf86ebf0fbbf8e571d7b585c9528a2">00049</a>         std::vector&lt;T&gt; <a class="code" href="structCSPvariable.html#a66cf86ebf0fbbf8e571d7b585c9528a2" title="Domain of the variable, declared as a vector.">domain</a>;
+<a name="l00050"></a>00050 };
+<a name="l00051"></a>00051 
+<a name="l00056"></a><a class="code" href="classCSPexception.html">00056</a> <span class="keyword">class </span><a class="code" href="classCSPexception.html" title="Class for managing exception in CSP.">CSPexception</a> : <span class="keyword">public</span> std::exception  {
+<a name="l00057"></a>00057         <span class="keyword">const</span> <span class="keywordtype">char</span>* message;
+<a name="l00058"></a>00058 
+<a name="l00059"></a>00059 <span class="keyword">public</span>:
+<a name="l00064"></a><a class="code" href="classCSPexception.html#a810bcfbb11d2e35d7b95f1e2b11b408c">00064</a>         <a class="code" href="classCSPexception.html#a810bcfbb11d2e35d7b95f1e2b11b408c" title="Constructor.">CSPexception</a> (<span class="keyword">const</span> <span class="keywordtype">char</span> *m)  {
+<a name="l00065"></a>00065                 message = m;
+<a name="l00066"></a>00066         }
+<a name="l00067"></a>00067 
+<a name="l00071"></a><a class="code" href="classCSPexception.html#a7013e90a6c26ba4c15bc6fbc42be02ef">00071</a>         <span class="keyword">virtual</span> <span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="classCSPexception.html#a7013e90a6c26ba4c15bc6fbc42be02ef" title="Return the description of the exception.">what</a>()  {
+<a name="l00072"></a>00072                 <span class="keywordflow">return</span> message;
+<a name="l00073"></a>00073         }
+<a name="l00074"></a>00074 };
+<a name="l00075"></a>00075 
+<a name="l00080"></a>00080 <span class="keyword">template</span>&lt;<span class="keyword">class</span> T&gt;
+<a name="l00081"></a><a class="code" href="classCSP.html">00081</a> <span class="keyword">class </span><a class="code" href="classCSP.html" title="Main class for managing a CSP.">CSP</a>  {
+<a name="l00082"></a>00082 <span class="keyword">private</span>:
+<a name="l00083"></a>00083         <span class="keyword">template</span>&lt;<span class="keyword">class</span> TT&gt;
+<a name="l00084"></a>00084         <span class="keyword">struct </span>arc  {
+<a name="l00085"></a>00085                 <a class="code" href="structCSPvariable.html">CSPvariable&lt;TT&gt;</a> var[2];
+<a name="l00086"></a>00086                 TT <a class="code" href="classCSP.html#aafa5e1a65d6c5d80780437d8d684f32a" title="Get the value of the i-th variable of the CSP. Be careful: before using this function...">value</a>[2];
+<a name="l00087"></a>00087         };
+<a name="l00088"></a>00088 
+<a name="l00089"></a>00089         std::vector&lt; CSPvariable&lt;T&gt; &gt; variables;
+<a name="l00090"></a>00090         std::vector&lt; bool (*)(std::vector&lt; CSPvariable&lt;T&gt; &gt;) &gt; constraints;
+<a name="l00091"></a>00091 <span class="preprocessor">        #define         constraint      constraints[0]</span>
+<a name="l00092"></a>00092 <span class="preprocessor"></span>
+<a name="l00093"></a>00093         std::vector&lt; std::vector&lt;T&gt; &gt; __default_domains;
+<a name="l00094"></a>00094         T __default_value;
+<a name="l00095"></a>00095         <span class="keywordtype">bool</span> __has_default_value;
+<a name="l00096"></a>00096         <span class="keyword">static</span> <span class="keywordtype">bool</span> __default_constraint ( std::vector&lt; <a class="code" href="structCSPvariable.html" title="Struct used for describing a variable in the CSP.">CSPvariable&lt;T&gt;</a> &gt; v )  { <span class="keywordflow">return</span> <span class="keyword">true</span>; }
+<a name="l00097"></a>00097         <span class="keywordtype">void</span> __init ( <span class="keywordtype">int</span> n, <span class="keywordtype">bool</span> (*c)(std::vector&lt; <a class="code" href="structCSPvariable.html" title="Struct used for describing a variable in the CSP.">CSPvariable&lt;T&gt;</a> &gt;) );
+<a name="l00098"></a>00098         <span class="keywordtype">void</span> restoreDomains ( <span class="keywordtype">void</span> );
+<a name="l00099"></a>00099 
+<a name="l00100"></a>00100 <span class="keyword">public</span>:
+<a name="l00105"></a><a class="code" href="classCSP.html#a3a4c1cfab4f5c2376b5f9da588e73f5a">00105</a>         <a class="code" href="classCSP.html#a3a4c1cfab4f5c2376b5f9da588e73f5a" title="Empty constructor - just do nothing, used for declaring an object and initialize...">CSP</a>()  {}
+<a name="l00106"></a>00106         
+<a name="l00116"></a>00116         <a class="code" href="classCSP.html#a3a4c1cfab4f5c2376b5f9da588e73f5a" title="Empty constructor - just do nothing, used for declaring an object and initialize...">CSP</a> ( <span class="keywordtype">int</span> n, <span class="keywordtype">bool</span> (*c)(std::vector&lt; <a class="code" href="structCSPvariable.html" title="Struct used for describing a variable in the CSP.">CSPvariable&lt;T&gt;</a> &gt;) = __default_constraint );
+<a name="l00117"></a>00117 
+<a name="l00131"></a>00131         <a class="code" href="classCSP.html#a3a4c1cfab4f5c2376b5f9da588e73f5a" title="Empty constructor - just do nothing, used for declaring an object and initialize...">CSP</a> ( <span class="keywordtype">int</span> n, T default_value, <span class="keywordtype">bool</span> set_variables = <span class="keyword">false</span>, <span class="keywordtype">bool</span> (*c)(std::vector&lt; <a class="code" href="structCSPvariable.html" title="Struct used for describing a variable in the CSP.">CSPvariable&lt;T&gt;</a> &gt;) = __default_constraint );
+<a name="l00132"></a>00132 
+<a name="l00138"></a>00138         <span class="keywordtype">void</span> <a class="code" href="classCSP.html#a4017c17aac9d3e96d0e821ebbe09da7b" title="Set the domain for the i-th variable.">setDomain</a> ( <span class="keywordtype">size_t</span> index, std::vector&lt;T&gt; <a class="code" href="classCSP.html#ae9db774b971c480cbef66168b9b6cf07" title="Get the domain of the i-th variable.">domain</a> );
+<a name="l00139"></a>00139 
+<a name="l00146"></a>00146         <span class="keywordtype">void</span> <a class="code" href="classCSP.html#a4017c17aac9d3e96d0e821ebbe09da7b" title="Set the domain for the i-th variable.">setDomain</a> ( <span class="keywordtype">size_t</span> index, T <a class="code" href="classCSP.html#ae9db774b971c480cbef66168b9b6cf07" title="Get the domain of the i-th variable.">domain</a>[], <span class="keywordtype">int</span> <a class="code" href="classCSP.html#a125c7171c19b99e631926bbe011f127d" title="Get the number of variables in the current CSP.">size</a> );
+<a name="l00147"></a>00147 
+<a name="l00152"></a>00152         <span class="keywordtype">void</span> <a class="code" href="classCSP.html#a534a0d9bd10fb544f94196bf3c386657" title="Apply the constraint to the CSP as a boolean function.">setConstraint</a> ( <span class="keywordtype">bool</span> (*c)(std::vector&lt; <a class="code" href="structCSPvariable.html" title="Struct used for describing a variable in the CSP.">CSPvariable&lt;T&gt;</a> &gt;) );
+<a name="l00153"></a>00153 
+<a name="l00159"></a>00159         <span class="keywordtype">void</span> <a class="code" href="classCSP.html#a534a0d9bd10fb544f94196bf3c386657" title="Apply the constraint to the CSP as a boolean function.">setConstraint</a> ( std::vector&lt; <span class="keywordtype">bool</span>(*)(std::vector&lt; <a class="code" href="structCSPvariable.html" title="Struct used for describing a variable in the CSP.">CSPvariable&lt;T&gt;</a> &gt;) &gt; c );
+<a name="l00160"></a>00160 
+<a name="l00165"></a>00165         <span class="keywordtype">void</span> <a class="code" href="classCSP.html#a0231b93bceae257f0e1c35041f8fe63f" title="Drops a constraint from the CSP.">dropConstraint</a> ( <span class="keywordtype">size_t</span> index );
+<a name="l00166"></a>00166 
+<a name="l00171"></a>00171         <span class="keywordtype">void</span> <a class="code" href="classCSP.html#a8dc6aec6ca7e40d198e58b0ec14fee66" title="Append a constraint to the list of the constraint of the CSP.">appendConstraint</a> ( <span class="keywordtype">bool</span> (*c)(std::vector&lt; <a class="code" href="structCSPvariable.html" title="Struct used for describing a variable in the CSP.">CSPvariable&lt;T&gt;</a> &gt;) );
+<a name="l00172"></a>00172 
+<a name="l00178"></a>00178         <span class="keywordtype">void</span> <a class="code" href="classCSP.html#a466845256e638c5e258fd728b641359f" title="Updates the domains of the variables. Any constraint or node fixed value is applied...">refreshDomains</a> ( <span class="keywordtype">void</span> );
+<a name="l00179"></a>00179 
+<a name="l00184"></a>00184         <span class="keywordtype">void</span> <a class="code" href="classCSP.html#a7ff61c379081881c21626926bdfd8733" title="Get, if it exists, the solution of the CSP, calling refreshDomains until a fixed...">solve</a> ( <span class="keywordtype">size_t</span> maxIterations = 0 );
+<a name="l00185"></a>00185 
+<a name="l00191"></a>00191         std::vector&lt;T&gt; <a class="code" href="classCSP.html#ae9db774b971c480cbef66168b9b6cf07" title="Get the domain of the i-th variable.">domain</a> ( <span class="keywordtype">size_t</span> index );
+<a name="l00192"></a>00192 
+<a name="l00197"></a>00197         <span class="keywordtype">size_t</span> <a class="code" href="classCSP.html#a125c7171c19b99e631926bbe011f127d" title="Get the number of variables in the current CSP.">size</a> ( <span class="keywordtype">void</span> );
+<a name="l00198"></a>00198         
+<a name="l00204"></a>00204         <span class="keywordtype">void</span> <a class="code" href="classCSP.html#ac25064c5b2d4e1020173b56913251ebd" title="Set the value of a variable as a constraint.">setValue</a> ( <span class="keywordtype">size_t</span> index, T <a class="code" href="classCSP.html#aafa5e1a65d6c5d80780437d8d684f32a" title="Get the value of the i-th variable of the CSP. Be careful: before using this function...">value</a> );
+<a name="l00205"></a>00205 
+<a name="l00213"></a>00213         <span class="keywordtype">void</span> <a class="code" href="classCSP.html#a4c0cae125a610f519dc22eaec255a0ae" title="Marks a variable as not set, and if a default value was assigned in the CSP constructor...">unsetValue</a> ( <span class="keywordtype">size_t</span> index );
+<a name="l00214"></a>00214 
+<a name="l00219"></a>00219         <span class="keywordtype">bool</span> <a class="code" href="classCSP.html#a7ef9eb91c38815c9d82182696a6bd5d3" title="Check if the current CSP, with the applied constraints, is satisfiable.">isSatisfiable</a> ( <span class="keywordtype">void</span> );
+<a name="l00220"></a>00220 
+<a name="l00227"></a>00227         <span class="keywordtype">bool</span> <a class="code" href="classCSP.html#ae96286c6c7dfb6fe077544e0d4af15f4" title="Check if the CSP, with the given variables, domains and constraints, admits a unique...">hasUniqueSolution</a> ( <span class="keywordtype">void</span> );
+<a name="l00228"></a>00228 
+<a name="l00234"></a>00234         <span class="keywordtype">void</span> <a class="code" href="classCSP.html#ac74cb751589a58bf6f2815f6878d2213" title="Check if any of the variables in the CSP has a domain containing an only item. If...">assignUniqueDomains</a> ( <span class="keywordtype">void</span> );
+<a name="l00240"></a>00240         <span class="keywordtype">bool</span> <a class="code" href="classCSP.html#a213dafc1aae7b1825371810a511eca4f" title="Check if the i-th variable in the CSP has a fixed value.">isSet</a> ( <span class="keywordtype">size_t</span> i );
+<a name="l00241"></a>00241 
+<a name="l00251"></a>00251         T <a class="code" href="classCSP.html#aafa5e1a65d6c5d80780437d8d684f32a" title="Get the value of the i-th variable of the CSP. Be careful: before using this function...">value</a> ( <span class="keywordtype">size_t</span> i );
+<a name="l00252"></a>00252 };
+<a name="l00253"></a>00253 
+<a name="l00254"></a>00254 <span class="preprocessor">#endif</span>
+<a name="l00255"></a>00255 <span class="preprocessor"></span>
 </pre></div></div>
 <!--- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -169,7 +174,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </iframe>
 </div>
 
-<hr class="footer"/><address style="text-align: right;"><small>Generated on Mon May 24 01:58:01 2010 for libCSP++ by&nbsp;
+<hr class="footer"/><address style="text-align: right;"><small>Generated on Thu May 27 11:41:31 2010 for libCSP++ by&nbsp;
 <a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.6.3 </small></address>
 </body>

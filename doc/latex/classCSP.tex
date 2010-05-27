@@ -40,14 +40,16 @@ void \hyperlink{classCSP_a0231b93bceae257f0e1c35041f8fe63f}{dropConstraint} (siz
 \begin{DoxyCompactList}\small\item\em Drops a constraint from the \hyperlink{classCSP}{CSP}. \item\end{DoxyCompactList}\item 
 void \hyperlink{classCSP_a8dc6aec6ca7e40d198e58b0ec14fee66}{appendConstraint} (bool($\ast$c)(std::vector$<$ \hyperlink{structCSPvariable}{CSPvariable}$<$ T $>$ $>$))
 \begin{DoxyCompactList}\small\item\em Append a constraint to the list of the constraint of the \hyperlink{classCSP}{CSP}. \item\end{DoxyCompactList}\item 
-\hypertarget{classCSP_a466845256e638c5e258fd728b641359f}{
-void \hyperlink{classCSP_a466845256e638c5e258fd728b641359f}{refreshDomains} (void)}
-\label{classCSP_a466845256e638c5e258fd728b641359f}
-
+void \hyperlink{classCSP_a466845256e638c5e258fd728b641359f}{refreshDomains} (void)
 \begin{DoxyCompactList}\small\item\em Updates the domains of the variables. Any constraint or node fixed value is applied. \item\end{DoxyCompactList}\item 
-std::vector$<$ T $>$ \hyperlink{classCSP_a2a9a7d8072613f6984795d5495373847}{getDomain} (size\_\-t index)
+\hypertarget{classCSP_a7ff61c379081881c21626926bdfd8733}{
+void \hyperlink{classCSP_a7ff61c379081881c21626926bdfd8733}{solve} (size\_\-t maxIterations=0)}
+\label{classCSP_a7ff61c379081881c21626926bdfd8733}
+
+\begin{DoxyCompactList}\small\item\em Get, if it exists, the solution of the \hyperlink{classCSP}{CSP}, calling refreshDomains until a fixed point is reached. \item\end{DoxyCompactList}\item 
+std::vector$<$ T $>$ \hyperlink{classCSP_ae9db774b971c480cbef66168b9b6cf07}{domain} (size\_\-t index)
 \begin{DoxyCompactList}\small\item\em Get the domain of the i-\/th variable. \item\end{DoxyCompactList}\item 
-size\_\-t \hyperlink{classCSP_a91a0e89bc1882d39b88122bee392c5f3}{getSize} (void)
+size\_\-t \hyperlink{classCSP_a125c7171c19b99e631926bbe011f127d}{size} (void)
 \begin{DoxyCompactList}\small\item\em Get the number of variables in the current \hyperlink{classCSP}{CSP}. \item\end{DoxyCompactList}\item 
 void \hyperlink{classCSP_ac25064c5b2d4e1020173b56913251ebd}{setValue} (size\_\-t index, T value)
 \begin{DoxyCompactList}\small\item\em Set the value of a variable as a constraint. \item\end{DoxyCompactList}\item 
@@ -113,6 +115,21 @@ Append a constraint to the list of the constraint of the \hyperlink{classCSP}{CS
 
 \begin{DoxyParams}{Parameters}
 \item[{\em c}]A function pointer returning a boolean value representing the new constraint \end{DoxyParams}
+\hypertarget{classCSP_ae9db774b971c480cbef66168b9b6cf07}{
+\index{CSP@{CSP}!domain@{domain}}
+\index{domain@{domain}!CSP@{CSP}}
+\subsubsection[{domain}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ std::vector$<$ T $>$ {\bf CSP}$<$ T $>$::domain (size\_\-t {\em index})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classCSP_ae9db774b971c480cbef66168b9b6cf07}
+
+
+Get the domain of the i-\/th variable. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em index}]Variable for which we're going to get the domain \end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The domain of the i-\/th variable as a vector of T 
+\end{DoxyReturn}
 \hypertarget{classCSP_a0231b93bceae257f0e1c35041f8fe63f}{
 \index{CSP@{CSP}!dropConstraint@{dropConstraint}}
 \index{dropConstraint@{dropConstraint}!CSP@{CSP}}
@@ -125,33 +142,6 @@ Drops a constraint from the \hyperlink{classCSP}{CSP}.
 
 \begin{DoxyParams}{Parameters}
 \item[{\em index}]Index of the constraint to be dropped \end{DoxyParams}
-\hypertarget{classCSP_a2a9a7d8072613f6984795d5495373847}{
-\index{CSP@{CSP}!getDomain@{getDomain}}
-\index{getDomain@{getDomain}!CSP@{CSP}}
-\subsubsection[{getDomain}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ std::vector$<$ T $>$ {\bf CSP}$<$ T $>$::getDomain (size\_\-t {\em index})\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{classCSP_a2a9a7d8072613f6984795d5495373847}
-
-
-Get the domain of the i-\/th variable. 
-
-
-\begin{DoxyParams}{Parameters}
-\item[{\em index}]Variable for which we're going to get the domain \end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-The domain of the i-\/th variable as a vector of T 
-\end{DoxyReturn}
-\hypertarget{classCSP_a91a0e89bc1882d39b88122bee392c5f3}{
-\index{CSP@{CSP}!getSize@{getSize}}
-\index{getSize@{getSize}!CSP@{CSP}}
-\subsubsection[{getSize}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ size\_\-t {\bf CSP}$<$ T $>$::getSize (void)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
-\label{classCSP_a91a0e89bc1882d39b88122bee392c5f3}
-
-
-Get the number of variables in the current \hyperlink{classCSP}{CSP}. 
-
-\begin{DoxyReturn}{Returns}
-Size of the \hyperlink{classCSP}{CSP} 
-\end{DoxyReturn}
 \hypertarget{classCSP_ae96286c6c7dfb6fe077544e0d4af15f4}{
 \index{CSP@{CSP}!hasUniqueSolution@{hasUniqueSolution}}
 \index{hasUniqueSolution@{hasUniqueSolution}!CSP@{CSP}}
@@ -191,6 +181,18 @@ Check if the i-\/th variable in the \hyperlink{classCSP}{CSP} has a fixed value.
 \begin{DoxyReturn}{Returns}
 true if the i-\/th variable has a fixed value, false otherwise 
 \end{DoxyReturn}
+\hypertarget{classCSP_a466845256e638c5e258fd728b641359f}{
+\index{CSP@{CSP}!refreshDomains@{refreshDomains}}
+\index{refreshDomains@{refreshDomains}!CSP@{CSP}}
+\subsubsection[{refreshDomains}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ void {\bf CSP}$<$ T $>$::refreshDomains (void)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classCSP_a466845256e638c5e258fd728b641359f}
+
+
+Updates the domains of the variables. Any constraint or node fixed value is applied. 
+
+
+\begin{DoxyParams}{Parameters}
+\item[{\em max\_\-iterations}]Maximum number of iterations, after which the function will quit. This can be used to break endless loops in domains assignations. \end{DoxyParams}
 \hypertarget{classCSP_a457e1df05d4ec16be00118bda22fd882}{
 \index{CSP@{CSP}!setConstraint@{setConstraint}}
 \index{setConstraint@{setConstraint}!CSP@{CSP}}
@@ -251,6 +253,18 @@ Set the value of a variable as a constraint.
 
 \begin{DoxyParams}{Parameters}
 \item[{\em index}]Index of the parameter to be set \item[{\em value}]Value to be set \end{DoxyParams}
+\hypertarget{classCSP_a125c7171c19b99e631926bbe011f127d}{
+\index{CSP@{CSP}!size@{size}}
+\index{size@{size}!CSP@{CSP}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$class T $>$ size\_\-t {\bf CSP}$<$ T $>$::size (void)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}
+\label{classCSP_a125c7171c19b99e631926bbe011f127d}
+
+
+Get the number of variables in the current \hyperlink{classCSP}{CSP}. 
+
+\begin{DoxyReturn}{Returns}
+Size of the \hyperlink{classCSP}{CSP} 
+\end{DoxyReturn}
 \hypertarget{classCSP_a4c0cae125a610f519dc22eaec255a0ae}{
 \index{CSP@{CSP}!unsetValue@{unsetValue}}
 \index{unsetValue@{unsetValue}!CSP@{CSP}}

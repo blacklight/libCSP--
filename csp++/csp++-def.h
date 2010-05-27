@@ -6,7 +6,7 @@
  *    Description:  Header file containing the CSP class definition. Never include this
  *                  file directly in your sources. Include csp++.h instead.
  *
- *        Version:  0.1
+ *        Version:  0.1.1
  *        Created:  16/05/2010 23:16:42
  *       Revision:  none
  *       Compiler:  gcc
@@ -25,7 +25,7 @@
 #error  "csp++-def.h must not be included directly - include csp++.h instead"
 #endif
 
-#define  __CSPPP_VERSION 	"0.1"
+#define  __CSPPP_VERSION 	"0.1.1"
 
 #include	<vector>
 #include	<exception>
@@ -172,21 +172,29 @@ public:
 
 	/**
 	 * \brief  Updates the domains of the variables. Any constraint or node fixed value is applied
+	 * \param  max_iterations Maximum number of iterations, after which the function will quit. This
+	 *         can be used to break endless loops in domains assignations.
 	 */
-	void refreshDomains( void );
+	void refreshDomains ( void );
+
+	/**
+	 * \brief Get, if it exists, the solution of the CSP, calling refreshDomains until a fixed point
+	 *        is reached
+	 */
+	void solve ( size_t maxIterations = 0 );
 
 	/**
 	 * \brief  Get the domain of the i-th variable
 	 * \param  index Variable for which we're going to get the domain
 	 * \return The domain of the i-th variable as a vector of T
 	 */
-	std::vector<T> getDomain ( size_t index );
+	std::vector<T> domain ( size_t index );
 
 	/**
 	 * \brief  Get the number of variables in the current CSP
 	 * \return Size of the CSP
 	 */
-	size_t getSize ( void );
+	size_t size ( void );
 	
 	/**
 	 * \brief  Set the value of a variable as a constraint

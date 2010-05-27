@@ -1,10 +1,14 @@
 /*
  * =====================================================================================
  *
- *       Filename:  main.cpp
+ *       Filename:  fourcolours.cpp
  *
- *    Description:  
+ *    Description:  Interactively select a colour for some European countries. At each
+ *    			selection, the domains of colours for remaining countries are
+ *    			restricted, under the constraint "two adjacent countries cannot have
+ *    			the same colour"
  *
+ *       Complile:  g++ -IPATH/TO/csp++.h -o fourcolours fourcolours.cpp
  *        Version:  1.0
  *        Created:  17/05/2010 09:22:25
  *       Revision:  none
@@ -27,7 +31,7 @@
 using namespace std;
 
 typedef enum  {
-	I, CH, DK, D, A, F, E, P, B, L, NL
+	I, CH, DK, D, A, F, B, E, P, L, NL,
 } Country;
 
 typedef enum  {
@@ -38,7 +42,7 @@ typedef enum  {
 #define 	COLOURS 		4
 
 static const char* countries[COUNTRIES] = {
-	"Italy", "Switz.", "Denmark", "Germany", "Austria", "France", "Spain", "Portugal", "Belgium", "Luxemb.", "Holland"
+	"Italy", "Switz.", "Denmark", "Germany", "Austria", "France", "Belgium", "Spain", "Portugal", "Luxemb.", "Holland",
 };
 
 static const char* colours[COLOURS] = {
@@ -88,10 +92,10 @@ printDomain (CSP<Colour> csp, int variable)
 {
 	cout << "[ ";
 
-	for ( size_t i=0; i < csp.getDomain(variable).size(); i++ ) {
-		cout << colours[csp.getDomain(variable)[i]];
+	for ( size_t i=0; i < csp.domain(variable).size(); i++ ) {
+		cout << colours[csp.domain(variable)[i]];
 
-		if ( i < csp.getDomain(variable).size() - 1 )
+		if ( i < csp.domain(variable).size() - 1 )
 			cout << ", ";
 	}
 
@@ -106,7 +110,7 @@ printDomain (CSP<Colour> csp, int variable)
 void
 printDomains (CSP<Colour> csp)
 {
-	for ( size_t i=0; i < csp.getSize(); i++)  {
+	for ( size_t i=0; i < csp.size(); i++)  {
 		cout << "Domain for variable '" << countries[i] << "':\t";
 		printDomain(csp, i);
 		cout << endl;
@@ -149,8 +153,8 @@ getIndexByColour ( const char* colour )
  */
 bool
 valueOK ( CSP<Colour> csp, size_t variable, Colour value )  {
-	for ( size_t i=0; i < csp.getDomain(variable).size(); i++ ) {
-		if (csp.getDomain(variable)[i] == value)
+	for ( size_t i=0; i < csp.domain(variable).size(); i++ ) {
+		if (csp.domain(variable)[i] == value)
 			return true;
 	}
 
@@ -180,17 +184,17 @@ main ( int argc, char *argv[] )
 			bool satisfiable = true;
 
 			// If a variable has an empty domain, something went wrong
-			// if (csp.getDomain(i).size() == 0)  {
-			// 	cout << "No values left for country " << countries[i]
-			// 		<< ", the domain was probably too small (few colours) or the problem is unsatisfiable\n";
-			// 	return EXIT_FAILURE;
-			// }
+			if (csp.domain(i).size() == 0)  {
+				cout << "No values left for country " << countries[i]
+					<< ", the domain was probably too small (few colours) or the problem is unsatisfiable\n";
+				return EXIT_FAILURE;
+			}
 
 			// If a variable has a domain containing an only element,
 			// just choose it without annoying the user
-			if (csp.getDomain(i).size() == 1)  {
-				cout << "Setting colour " << colours[csp.getDomain(i)[0]] << " for " << countries[i] << endl;
-				csp.setValue( i, csp.getDomain(i)[0] );
+			if (csp.domain(i).size() == 1)  {
+				cout << "Setting colour " << colours[csp.domain(i)[0]] << " for " << countries[i] << endl;
+				csp.setValue( i, csp.domain(i)[0] );
 				csp.refreshDomains();
 				continue;
 			}

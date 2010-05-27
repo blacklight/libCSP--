@@ -205,7 +205,7 @@ getSudoku (const char* sudokuFile)
 	csp.appendConstraint(colsConstraint);
 	csp.appendConstraint(cellsConstraint);
 
-	for ( int i=0; i < csp.getSize(); i++ )
+	for ( int i=0; i < csp.size(); i++ )
 		csp.setDomain(i, domain);
 
 	for ( int i=0; i < sudoku.size(); i++ ) {
@@ -245,37 +245,10 @@ main ( int argc, char *argv[] )
 		return EXIT_FAILURE;
 	}
 
-	bool changed = false;
-	int  steps = 1;
-	vector< vector<int> > oldDomains(csp.getSize());
-
-	do  {
-		cout << "Solving ... step " << steps++ << endl;
-
-		for ( int i=0; i < csp.getSize(); i++ )  {
-			oldDomains[i] = csp.getDomain(i);
-		}
-		
-		csp.refreshDomains();
-		csp.assignUniqueDomains();
-
-		if (csp.hasUniqueSolution())
-			break;
-
-		changed = false;
-
-		for ( int i=0; i < csp.getSize(); i++ )  {
-			if (csp.getDomain(i).size() != oldDomains[i].size())
-				changed = true;
-
-			for ( int j=0; j < csp.getDomain(i).size() && !changed; j++ ) {
-				if ( csp.getDomain(i)[j] != oldDomains[i][j] )
-					changed = true;
-			}
-		}
-	} while (changed);
-
+	cout << "Solving..." << endl;
+	csp.solve();
 	cout << endl;
+
 	printSudoku(csp);
 
 	if (csp.isSatisfiable())  {
