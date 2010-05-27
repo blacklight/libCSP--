@@ -4,321 +4,129 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
-A	fourcolours.cpp	/^	I, CH, DK, D, A, F, E, P, B, L, NL$/;"	e	enum:__anon1	file:
-B	fourcolours.cpp	/^	I, CH, DK, D, A, F, E, P, B, L, NL$/;"	e	enum:__anon1	file:
-CC	Makefile	/^CC = g++$/;"	m
-CCFLAGS	Makefile	/^CCFLAGS = -O3 -g$/;"	m
-CH	fourcolours.cpp	/^	I, CH, DK, D, A, F, E, P, B, L, NL$/;"	e	enum:__anon1	file:
-COLOURS	fourcolours.cpp	50;"	d	file:
-COUNTRIES	fourcolours.cpp	49;"	d	file:
+CSP	csp++-def.h	/^	CSP ( int n, T default_value, bool set_variables = false, bool (*c)(std::vector< CSPvariable<T> >) = __default_constraint );$/;"	p	class:CSP	access:public	signature:( int n, T default_value, bool set_variables = false, bool (*c)(std::vector< CSPvariable<T> >) = __default_constraint )
+CSP	csp++-def.h	/^	CSP ( int n, bool (*c)(std::vector< CSPvariable<T> >) = __default_constraint );$/;"	p	class:CSP	access:public	signature:( int n, bool (*c)(std::vector< CSPvariable<T> >) = __default_constraint )
+CSP	csp++-def.h	/^	CSP()  {}$/;"	f	class:CSP	access:public	signature:()
+CSP	csp++-def.h	/^class CSP  {$/;"	c
 CSP	csp++.cpp	/^CSP<T>::CSP ( int n, T default_value, bool set_value, bool (*c)(std::vector< CSPvariable<T> >) )$/;"	f	class:CSP	signature:( int n, T default_value, bool set_value, bool (*c)(std::vector< CSPvariable<T> >) )
 CSP	csp++.cpp	/^CSP<T>::CSP (int n, bool (*c)(vector< CSPvariable<T> >))$/;"	f	class:CSP	signature:(int n, bool (*c)(vector< CSPvariable<T> >))
-CSP	csp++.h	/^	CSP ( int n, T default_value, bool set_variables = false, bool (*c)(std::vector< CSPvariable<T> >) = __default_constraint );$/;"	p	class:CSP	access:public	signature:( int n, T default_value, bool set_variables = false, bool (*c)(std::vector< CSPvariable<T> >) = __default_constraint )
-CSP	csp++.h	/^	CSP ( int n, bool (*c)(std::vector< CSPvariable<T> >) = __default_constraint );$/;"	p	class:CSP	access:public	signature:( int n, bool (*c)(std::vector< CSPvariable<T> >) = __default_constraint )
-CSP	csp++.h	/^class CSP  {$/;"	c
-CSP	doc/latex/classCSP.tex	/^\\subsubsection[{CSP}]{\\setlength{\\rightskip}{0pt plus 5cm}template$<$class T $>$ {\\bf CSP}$<$ T $>$::{\\bf CSP} (int {\\em n}, \\\/  T {\\em default\\_\\-value}, \\\/  bool {\\em set\\_\\-variables} = {\\ttfamily false}, \\\/  bool($\\ast$)(std::vector$<$ {\\bf CSPvariable}$<$ T $>$ $>$) {\\em c} = {\\ttfamily \\_\\-\\_\\-default\\_\\-constraint})\\hspace{0.3cm}{\\ttfamily  \\mbox{[}inline\\mbox{]}}}}$/;"	b
-CSP	doc/latex/classCSP.tex	/^\\subsubsection[{CSP}]{\\setlength{\\rightskip}{0pt plus 5cm}template$<$class T $>$ {\\bf CSP}$<$ T $>$::{\\bf CSP} (int {\\em n}, \\\/  bool($\\ast$)(std::vector$<$ {\\bf CSPvariable}$<$ T $>$ $>$) {\\em c} = {\\ttfamily \\_\\-\\_\\-default\\_\\-constraint})}}$/;"	b
-CSP$ $ T $ $ Class Template Reference	doc/latex/classCSP.tex	/^\\section{CSP$<$ T $>$ Class Template Reference}$/;"	s
+CSP::CSP	csp++-def.h	/^	CSP ( int n, T default_value, bool set_variables = false, bool (*c)(std::vector< CSPvariable<T> >) = __default_constraint );$/;"	p	class:CSP	access:public	signature:( int n, T default_value, bool set_variables = false, bool (*c)(std::vector< CSPvariable<T> >) = __default_constraint )
+CSP::CSP	csp++-def.h	/^	CSP ( int n, bool (*c)(std::vector< CSPvariable<T> >) = __default_constraint );$/;"	p	class:CSP	access:public	signature:( int n, bool (*c)(std::vector< CSPvariable<T> >) = __default_constraint )
+CSP::CSP	csp++-def.h	/^	CSP()  {}$/;"	f	class:CSP	access:public	signature:()
 CSP::CSP	csp++.cpp	/^CSP<T>::CSP ( int n, T default_value, bool set_value, bool (*c)(std::vector< CSPvariable<T> >) )$/;"	f	class:CSP	signature:( int n, T default_value, bool set_value, bool (*c)(std::vector< CSPvariable<T> >) )
 CSP::CSP	csp++.cpp	/^CSP<T>::CSP (int n, bool (*c)(vector< CSPvariable<T> >))$/;"	f	class:CSP	signature:(int n, bool (*c)(vector< CSPvariable<T> >))
-CSP::CSP	csp++.h	/^	CSP ( int n, T default_value, bool set_variables = false, bool (*c)(std::vector< CSPvariable<T> >) = __default_constraint );$/;"	p	class:CSP	access:public	signature:( int n, T default_value, bool set_variables = false, bool (*c)(std::vector< CSPvariable<T> >) = __default_constraint )
-CSP::CSP	csp++.h	/^	CSP ( int n, bool (*c)(std::vector< CSPvariable<T> >) = __default_constraint );$/;"	p	class:CSP	access:public	signature:( int n, bool (*c)(std::vector< CSPvariable<T> >) = __default_constraint )
-CSP::__default_constraint	csp++.h	/^	static bool __default_constraint ( std::vector< CSPvariable<T> > v )  { return true; }$/;"	f	class:CSP	access:private	signature:( std::vector< CSPvariable<T> > v )
-CSP::__default_domains	csp++.h	/^	std::vector< std::vector<T> > __default_domains;$/;"	m	class:CSP	access:private
-CSP::__default_value	csp++.h	/^	T __default_value;$/;"	m	class:CSP	access:private
-CSP::__has_default_value	csp++.h	/^	bool __has_default_value;$/;"	m	class:CSP	access:private
+CSP::__default_constraint	csp++-def.h	/^	static bool __default_constraint ( std::vector< CSPvariable<T> > v )  { return true; }$/;"	f	class:CSP	access:private	signature:( std::vector< CSPvariable<T> > v )
+CSP::__default_domains	csp++-def.h	/^	std::vector< std::vector<T> > __default_domains;$/;"	m	class:CSP	access:private
+CSP::__default_value	csp++-def.h	/^	T __default_value;$/;"	m	class:CSP	access:private
+CSP::__has_default_value	csp++-def.h	/^	bool __has_default_value;$/;"	m	class:CSP	access:private
+CSP::__init	csp++-def.h	/^	void __init ( int n, bool (*c)(std::vector< CSPvariable<T> >) );$/;"	p	class:CSP	access:private	signature:( int n, bool (*c)(std::vector< CSPvariable<T> >) )
 CSP::__init	csp++.cpp	/^CSP<T>::__init (int n, bool (*c)(vector< CSPvariable<T> >))$/;"	f	class:CSP	signature:(int n, bool (*c)(vector< CSPvariable<T> >))
-CSP::__init	csp++.h	/^	void __init ( int n, bool (*c)(std::vector< CSPvariable<T> >) );$/;"	p	class:CSP	access:private	signature:( int n, bool (*c)(std::vector< CSPvariable<T> >) )
+CSP::appendConstraint	csp++-def.h	/^	void appendConstraint ( bool (*c)(std::vector< CSPvariable<T> >) );$/;"	p	class:CSP	access:public	signature:( bool (c)std::vector< CSPvariable<T> >) )
 CSP::appendConstraint	csp++.cpp	/^CSP<T>::appendConstraint ( bool (*c)(vector< CSPvariable<T> >))$/;"	f	class:CSP	signature:( bool (c)vector< CSPvariable<T> >))
-CSP::appendConstraint	csp++.h	/^	void appendConstraint ( bool (*c)(std::vector< CSPvariable<T> >) );$/;"	p	class:CSP	access:public	signature:( bool (c)std::vector< CSPvariable<T> >) )
-CSP::arc	csp++.h	/^	struct arc  {$/;"	s	class:CSP	access:private
-CSP::arc::value	csp++.h	/^		TT value[2];$/;"	m	struct:CSP::arc	access:public
-CSP::arc::var	csp++.h	/^		CSPvariable<TT> var[2];$/;"	m	struct:CSP::arc	access:public
+CSP::arc	csp++-def.h	/^	struct arc  {$/;"	s	class:CSP	access:private
+CSP::arc::value	csp++-def.h	/^		TT value[2];$/;"	m	struct:CSP::arc	access:public
+CSP::arc::var	csp++-def.h	/^		CSPvariable<TT> var[2];$/;"	m	struct:CSP::arc	access:public
+CSP::assignUniqueDomains	csp++-def.h	/^	void assignUniqueDomains ( void );$/;"	p	class:CSP	access:public	signature:( void )
 CSP::assignUniqueDomains	csp++.cpp	/^CSP<T>::assignUniqueDomains ( void )$/;"	f	class:CSP	signature:( void )
-CSP::assignUniqueDomains	csp++.h	/^	void assignUniqueDomains ( void );$/;"	p	class:CSP	access:public	signature:( void )
-CSP::constraints	csp++.h	/^	std::vector< bool (*)(std::vector< CSPvariable<T> >) > constraints;$/;"	m	class:CSP	access:private
+CSP::constraints	csp++-def.h	/^	std::vector< bool (*)(std::vector< CSPvariable<T> >) > constraints;$/;"	m	class:CSP	access:private
+CSP::dropConstraint	csp++-def.h	/^	void dropConstraint ( size_t index );$/;"	p	class:CSP	access:public	signature:( size_t index )
 CSP::dropConstraint	csp++.cpp	/^CSP<T>::dropConstraint ( size_t index )$/;"	f	class:CSP	signature:( size_t index )
-CSP::dropConstraint	csp++.h	/^	void dropConstraint ( size_t index );$/;"	p	class:CSP	access:public	signature:( size_t index )
+CSP::getDomain	csp++-def.h	/^	std::vector<T> getDomain ( size_t index );$/;"	p	class:CSP	access:public	signature:( size_t index )
 CSP::getDomain	csp++.cpp	/^CSP<T>::getDomain ( size_t index )$/;"	f	class:CSP	signature:( size_t index )
-CSP::getDomain	csp++.h	/^	std::vector<T> getDomain ( size_t index );$/;"	p	class:CSP	access:public	signature:( size_t index )
+CSP::getSize	csp++-def.h	/^	size_t getSize ( void );$/;"	p	class:CSP	access:public	signature:( void )
 CSP::getSize	csp++.cpp	/^CSP<T>::getSize( void )$/;"	f	class:CSP	signature:( void )
-CSP::getSize	csp++.h	/^	size_t getSize ( void );$/;"	p	class:CSP	access:public	signature:( void )
+CSP::getSolution	csp++-def.h	/^	void getSolution ( size_t maxIterations = 0 );$/;"	p	class:CSP	access:public	signature:( size_t maxIterations = 0 )
+CSP::getSolution	csp++.cpp	/^CSP<T>::getSolution ( size_t max_iterations )$/;"	f	class:CSP	signature:( size_t max_iterations )
+CSP::hasUniqueSolution	csp++-def.h	/^	bool hasUniqueSolution ( void );$/;"	p	class:CSP	access:public	signature:( void )
 CSP::hasUniqueSolution	csp++.cpp	/^CSP<T>::hasUniqueSolution ( void )$/;"	f	class:CSP	signature:( void )
-CSP::hasUniqueSolution	csp++.h	/^	bool hasUniqueSolution ( void );$/;"	p	class:CSP	access:public	signature:( void )
+CSP::isSatisfiable	csp++-def.h	/^	bool isSatisfiable ( void );$/;"	p	class:CSP	access:public	signature:( void )
 CSP::isSatisfiable	csp++.cpp	/^CSP<T>::isSatisfiable ( void )$/;"	f	class:CSP	signature:( void )
-CSP::isSatisfiable	csp++.h	/^	bool isSatisfiable ( void );$/;"	p	class:CSP	access:public	signature:( void )
+CSP::isSet	csp++-def.h	/^	bool isSet ( size_t i );$/;"	p	class:CSP	access:public	signature:( size_t i )
 CSP::isSet	csp++.cpp	/^CSP<T>::isSet ( size_t index )$/;"	f	class:CSP	signature:( size_t index )
-CSP::isSet	csp++.h	/^	bool isSet ( size_t i );$/;"	p	class:CSP	access:public	signature:( size_t i )
+CSP::refreshDomains	csp++-def.h	/^	void refreshDomains ( void );$/;"	p	class:CSP	access:public	signature:( void )
 CSP::refreshDomains	csp++.cpp	/^CSP<T>::refreshDomains ( void )$/;"	f	class:CSP	signature:( void )
-CSP::refreshDomains	csp++.h	/^	void refreshDomains( void );$/;"	p	class:CSP	access:public	signature:( void )
+CSP::restoreDomains	csp++-def.h	/^	void restoreDomains ( void );$/;"	p	class:CSP	access:private	signature:( void )
 CSP::restoreDomains	csp++.cpp	/^CSP<T>::restoreDomains ( void )$/;"	f	class:CSP	signature:( void )
-CSP::restoreDomains	csp++.h	/^	void restoreDomains ( void );$/;"	p	class:CSP	access:private	signature:( void )
+CSP::setConstraint	csp++-def.h	/^	void setConstraint ( bool (*c)(std::vector< CSPvariable<T> >) );$/;"	p	class:CSP	access:public	signature:( bool (c)std::vector< CSPvariable<T> >) )
+CSP::setConstraint	csp++-def.h	/^	void setConstraint ( std::vector< bool(*)(std::vector< CSPvariable<T> >) > c );$/;"	p	class:CSP	access:public	signature:( std::vector< bool(*)(std::vector< CSPvariable<T> >) > c )
 CSP::setConstraint	csp++.cpp	/^CSP<T>::setConstraint ( bool (*c)(vector< CSPvariable<T> >))$/;"	f	class:CSP	signature:( bool (c)vector< CSPvariable<T> >))
 CSP::setConstraint	csp++.cpp	/^CSP<T>::setConstraint ( std::vector< bool(*)(std::vector< CSPvariable<T> >) > c )$/;"	f	class:CSP	signature:( std::vector< bool(*)(std::vector< CSPvariable<T> >) > c )
-CSP::setConstraint	csp++.h	/^	void setConstraint ( bool (*c)(std::vector< CSPvariable<T> >) );$/;"	p	class:CSP	access:public	signature:( bool (c)std::vector< CSPvariable<T> >) )
-CSP::setConstraint	csp++.h	/^	void setConstraint ( std::vector< bool(*)(std::vector< CSPvariable<T> >) > c );$/;"	p	class:CSP	access:public	signature:( std::vector< bool(*)(std::vector< CSPvariable<T> >) > c )
+CSP::setDomain	csp++-def.h	/^	void setDomain ( size_t index, T domain[], int size );$/;"	p	class:CSP	access:public	signature:( size_t index, T domain[], int size )
+CSP::setDomain	csp++-def.h	/^	void setDomain ( size_t index, std::vector<T> domain );$/;"	p	class:CSP	access:public	signature:( size_t index, std::vector<T> domain )
 CSP::setDomain	csp++.cpp	/^CSP<T>::setDomain (size_t index, T domain[], int size)$/;"	f	class:CSP	signature:(size_t index, T domain[], int size)
 CSP::setDomain	csp++.cpp	/^CSP<T>::setDomain (size_t index, vector<T> domain)$/;"	f	class:CSP	signature:(size_t index, vector<T> domain)
-CSP::setDomain	csp++.h	/^	void setDomain ( size_t index, T domain[], int size );$/;"	p	class:CSP	access:public	signature:( size_t index, T domain[], int size )
-CSP::setDomain	csp++.h	/^	void setDomain ( size_t index, std::vector<T> domain );$/;"	p	class:CSP	access:public	signature:( size_t index, std::vector<T> domain )
+CSP::setValue	csp++-def.h	/^	void setValue ( size_t index, T value );$/;"	p	class:CSP	access:public	signature:( size_t index, T value )
 CSP::setValue	csp++.cpp	/^CSP<T>::setValue ( size_t index, T value )$/;"	f	class:CSP	signature:( size_t index, T value )
-CSP::setValue	csp++.h	/^	void setValue ( size_t index, T value );$/;"	p	class:CSP	access:public	signature:( size_t index, T value )
+CSP::unsetValue	csp++-def.h	/^	void unsetValue ( size_t index );$/;"	p	class:CSP	access:public	signature:( size_t index )
 CSP::unsetValue	csp++.cpp	/^CSP<T>::unsetValue ( size_t index )$/;"	f	class:CSP	signature:( size_t index )
-CSP::unsetValue	csp++.h	/^	void unsetValue ( size_t index );$/;"	p	class:CSP	access:public	signature:( size_t index )
+CSP::value	csp++-def.h	/^	T value ( size_t i );$/;"	p	class:CSP	access:public	signature:( size_t i )
 CSP::value	csp++.cpp	/^CSP<T>::value ( size_t index )$/;"	f	class:CSP	signature:( size_t index )
-CSP::value	csp++.h	/^	T value ( size_t i );$/;"	p	class:CSP	access:public	signature:( size_t i )
-CSP::variables	csp++.h	/^	std::vector< CSPvariable<T> > variables;$/;"	m	class:CSP	access:private
-CSPexception	csp++.h	/^	CSPexception (const char *m)  {$/;"	f	class:CSPexception	access:public	signature:(const char *m)
-CSPexception	csp++.h	/^class CSPexception : public std::exception  {$/;"	c	inherits:std::exception
-CSPexception Class Reference	doc/latex/classCSPexception.tex	/^\\section{CSPexception Class Reference}$/;"	s
-CSPexception::CSPexception	csp++.h	/^	CSPexception (const char *m)  {$/;"	f	class:CSPexception	access:public	signature:(const char *m)
-CSPexception::message	csp++.h	/^	const char* message;$/;"	m	class:CSPexception	access:private
-CSPexception::what	csp++.h	/^	virtual const char* what()  {$/;"	f	class:CSPexception	access:public	signature:()
-CSPvariable	csp++.h	/^struct CSPvariable  {$/;"	s
-CSPvariable$ $ T $ $ Struct Template Reference	doc/latex/structCSPvariable.tex	/^\\section{CSPvariable$<$ T $>$ Struct Template Reference}$/;"	s
-CSPvariable::domain	csp++.h	/^	std::vector<T> domain;$/;"	m	struct:CSPvariable	access:public
-CSPvariable::fixed	csp++.h	/^	bool fixed;$/;"	m	struct:CSPvariable	access:public
-CSPvariable::index	csp++.h	/^	int index;$/;"	m	struct:CSPvariable	access:public
-CSPvariable::value	csp++.h	/^	T value;$/;"	m	struct:CSPvariable	access:public
-Class Documentation	doc/latex/refman.tex	/^\\chapter{Class Documentation}$/;"	c
-Class Index	doc/latex/refman.tex	/^\\chapter{Class Index}$/;"	c
-Class List	doc/latex/annotated.tex	/^\\section{Class List}$/;"	s
-Classes	doc/latex/classCSP.tex	/^\\subsection*{Classes}$/;"	b
-Colour	fourcolours.cpp	/^} Colour;$/;"	t	typeref:enum:__anon2	file:
-Constructor Destructor Documentation	doc/latex/classCSP.tex	/^\\subsection{Constructor \\& Destructor Documentation}$/;"	b
-Country	fourcolours.cpp	/^} Country;$/;"	t	typeref:enum:__anon1	file:
-D	fourcolours.cpp	/^	I, CH, DK, D, A, F, E, P, B, L, NL$/;"	e	enum:__anon1	file:
-DEFAULT_SUDOKU_FILE	sudoku.cpp	42;"	d	file:
-DK	fourcolours.cpp	/^	I, CH, DK, D, A, F, E, P, B, L, NL$/;"	e	enum:__anon1	file:
-Detailed Description	doc/latex/classCSP.tex	/^\\subsection{Detailed Description}$/;"	b
-Detailed Description	doc/latex/classCSPexception.tex	/^\\subsection{Detailed Description}$/;"	b
-E	fourcolours.cpp	/^	I, CH, DK, D, A, F, E, P, B, L, NL$/;"	e	enum:__anon1	file:
-F	fourcolours.cpp	/^	I, CH, DK, D, A, F, E, P, B, L, NL$/;"	e	enum:__anon1	file:
-FOURCOLOURS	Makefile	/^FOURCOLOURS = fourcolours$/;"	m
-HEIGHT	sudoku.cpp	40;"	d	file:
-I	fourcolours.cpp	/^	I, CH, DK, D, A, F, E, P, B, L, NL$/;"	e	enum:__anon1	file:
-INCLUDES	Makefile	/^INCLUDES = -I.$/;"	m
-L	fourcolours.cpp	/^	I, CH, DK, D, A, F, E, P, B, L, NL$/;"	e	enum:__anon1	file:
-NL	fourcolours.cpp	/^	I, CH, DK, D, A, F, E, P, B, L, NL$/;"	e	enum:__anon1	file:
-NOVALUE	sudoku.cpp	41;"	d	file:
-OBJ	Makefile	/^OBJ = $(SRC:.cpp=.o)$/;"	m
-OUT	Makefile	/^OUT = libcsp++.a$/;"	m
-P	fourcolours.cpp	/^	I, CH, DK, D, A, F, E, P, B, L, NL$/;"	e	enum:__anon1	file:
-Public Attributes	doc/latex/structCSPvariable.tex	/^\\subsection*{Public Attributes}$/;"	b
-Public Member Functions	doc/latex/classCSP.tex	/^\\subsection*{Public Member Functions}$/;"	b
-Public Member Functions	doc/latex/classCSPexception.tex	/^\\subsection*{Public Member Functions}$/;"	b
-SRC	Makefile	/^SRC = csp++.cpp$/;"	m
-SUDOKU	Makefile	/^SUDOKU = sudoku$/;"	m
-SearchBox	doc/html/search/search.js	/^function SearchBox(name, resultsPath, inFrame, label)$/;"	c
-SearchBox.Activate	doc/html/search/search.js	/^  this.Activate = function(isActive)$/;"	m
-SearchBox.CloseResultsWindow	doc/html/search/search.js	/^  this.CloseResultsWindow = function()$/;"	m
-SearchBox.CloseSelectionWindow	doc/html/search/search.js	/^  this.CloseSelectionWindow = function()$/;"	m
-SearchBox.DOMPopupSearchResults	doc/html/search/search.js	/^  this.DOMPopupSearchResults = function()$/;"	m
-SearchBox.DOMPopupSearchResultsWindow	doc/html/search/search.js	/^  this.DOMPopupSearchResultsWindow = function()$/;"	m
-SearchBox.DOMSearchBox	doc/html/search/search.js	/^  this.DOMSearchBox = function()$/;"	m
-SearchBox.DOMSearchClose	doc/html/search/search.js	/^  this.DOMSearchClose = function()$/;"	m
-SearchBox.DOMSearchField	doc/html/search/search.js	/^  this.DOMSearchField = function()$/;"	m
-SearchBox.DOMSearchSelect	doc/html/search/search.js	/^  this.DOMSearchSelect = function()$/;"	m
-SearchBox.DOMSearchSelectWindow	doc/html/search/search.js	/^  this.DOMSearchSelectWindow = function()$/;"	m
-SearchBox.OnSearchFieldChange	doc/html/search/search.js	/^  this.OnSearchFieldChange = function(evt)$/;"	m
-SearchBox.OnSearchFieldFocus	doc/html/search/search.js	/^  this.OnSearchFieldFocus = function(isActive)$/;"	m
-SearchBox.OnSearchSelectHide	doc/html/search/search.js	/^  this.OnSearchSelectHide = function()$/;"	m
-SearchBox.OnSearchSelectKey	doc/html/search/search.js	/^  this.OnSearchSelectKey = function(evt)$/;"	m
-SearchBox.OnSearchSelectShow	doc/html/search/search.js	/^  this.OnSearchSelectShow = function()$/;"	m
-SearchBox.OnSelectItem	doc/html/search/search.js	/^  this.OnSelectItem = function(id)$/;"	m
-SearchBox.Search	doc/html/search/search.js	/^  this.Search = function()$/;"	m
-SearchBox.SelectItemCount	doc/html/search/search.js	/^  this.SelectItemCount = function(id)$/;"	m
-SearchBox.SelectItemSet	doc/html/search/search.js	/^  this.SelectItemSet = function(id)$/;"	m
-SearchResults	doc/html/search/search.js	/^function SearchResults(name)$/;"	c
-SearchResults.FindChildElement	doc/html/search/search.js	/^    this.FindChildElement = function(id)$/;"	m
-SearchResults.Nav	doc/html/search/search.js	/^    this.Nav = function(evt,itemIndex) $/;"	m
-SearchResults.NavChild	doc/html/search/search.js	/^    this.NavChild = function(evt,itemIndex,childIndex)$/;"	m
-SearchResults.NavNext	doc/html/search/search.js	/^    this.NavNext = function(index)$/;"	m
-SearchResults.NavPrev	doc/html/search/search.js	/^    this.NavPrev = function(index)$/;"	m
-SearchResults.ProcessKeys	doc/html/search/search.js	/^    this.ProcessKeys = function(e)$/;"	m
-SearchResults.Search	doc/html/search/search.js	/^    this.Search = function(search)$/;"	m
-SearchResults.Toggle	doc/html/search/search.js	/^    this.Toggle = function(id)$/;"	m
-WIDTH	sudoku.cpp	39;"	d	file:
-__CSPPP_H	csp++.h	20;"	d
-__default_constraint	csp++.h	/^	static bool __default_constraint ( std::vector< CSPvariable<T> > v )  { return true; }$/;"	f	class:CSP	access:private	signature:( std::vector< CSPvariable<T> > v )
-__default_domains	csp++.h	/^	std::vector< std::vector<T> > __default_domains;$/;"	m	class:CSP	access:private
-__default_value	csp++.h	/^	T __default_value;$/;"	m	class:CSP	access:private
-__has_default_value	csp++.h	/^	bool __has_default_value;$/;"	m	class:CSP	access:private
+CSP::variables	csp++-def.h	/^	std::vector< CSPvariable<T> > variables;$/;"	m	class:CSP	access:private
+CSPexception	csp++-def.h	/^	CSPexception (const char *m)  {$/;"	f	class:CSPexception	access:public	signature:(const char *m)
+CSPexception	csp++-def.h	/^class CSPexception : public std::exception  {$/;"	c	inherits:std::exception
+CSPexception::CSPexception	csp++-def.h	/^	CSPexception (const char *m)  {$/;"	f	class:CSPexception	access:public	signature:(const char *m)
+CSPexception::message	csp++-def.h	/^	const char* message;$/;"	m	class:CSPexception	access:private
+CSPexception::what	csp++-def.h	/^	virtual const char* what()  {$/;"	f	class:CSPexception	access:public	signature:()
+CSPvariable	csp++-def.h	/^struct CSPvariable  {$/;"	s
+CSPvariable::domain	csp++-def.h	/^	std::vector<T> domain;$/;"	m	struct:CSPvariable	access:public
+CSPvariable::fixed	csp++-def.h	/^	bool fixed;$/;"	m	struct:CSPvariable	access:public
+CSPvariable::index	csp++-def.h	/^	int index;$/;"	m	struct:CSPvariable	access:public
+CSPvariable::value	csp++-def.h	/^	T value;$/;"	m	struct:CSPvariable	access:public
+__CSPPP_CPP	csp++.cpp	23;"	d	file:
+__CSPPP_CPP	csp++.cpp	25;"	d	file:
+__CSPPP_H	csp++-def.h	22;"	d
+__CSPPP_VERSION	csp++-def.h	28;"	d
+__default_constraint	csp++-def.h	/^	static bool __default_constraint ( std::vector< CSPvariable<T> > v )  { return true; }$/;"	f	class:CSP	access:private	signature:( std::vector< CSPvariable<T> > v )
+__default_domains	csp++-def.h	/^	std::vector< std::vector<T> > __default_domains;$/;"	m	class:CSP	access:private
+__default_value	csp++-def.h	/^	T __default_value;$/;"	m	class:CSP	access:private
+__has_default_value	csp++-def.h	/^	bool __has_default_value;$/;"	m	class:CSP	access:private
+__init	csp++-def.h	/^	void __init ( int n, bool (*c)(std::vector< CSPvariable<T> >) );$/;"	p	class:CSP	access:private	signature:( int n, bool (*c)(std::vector< CSPvariable<T> >) )
 __init	csp++.cpp	/^CSP<T>::__init (int n, bool (*c)(vector< CSPvariable<T> >))$/;"	f	class:CSP	signature:(int n, bool (*c)(vector< CSPvariable<T> >))
-__init	csp++.h	/^	void __init ( int n, bool (*c)(std::vector< CSPvariable<T> >) );$/;"	p	class:CSP	access:private	signature:( int n, bool (*c)(std::vector< CSPvariable<T> >) )
-_details	doc/html/classCSP.html	/^<hr\/><a name="_details"><\/a><h2>Detailed Description<\/h2>$/;"	a
-_details	doc/html/classCSPexception.html	/^<hr\/><a name="_details"><\/a><h2>Detailed Description<\/h2>$/;"	a
+appendConstraint	csp++-def.h	/^	void appendConstraint ( bool (*c)(std::vector< CSPvariable<T> >) );$/;"	p	class:CSP	access:public	signature:( bool (c)std::vector< CSPvariable<T> >) )
 appendConstraint	csp++.cpp	/^CSP<T>::appendConstraint ( bool (*c)(vector< CSPvariable<T> >))$/;"	f	class:CSP	signature:( bool (c)vector< CSPvariable<T> >))
-appendConstraint	csp++.h	/^	void appendConstraint ( bool (*c)(std::vector< CSPvariable<T> >) );$/;"	p	class:CSP	access:public	signature:( bool (c)std::vector< CSPvariable<T> >) )
-arc	csp++.h	/^	struct arc  {$/;"	s	class:CSP	access:private
+arc	csp++-def.h	/^	struct arc  {$/;"	s	class:CSP	access:private
+assignUniqueDomains	csp++-def.h	/^	void assignUniqueDomains ( void );$/;"	p	class:CSP	access:public	signature:( void )
 assignUniqueDomains	csp++.cpp	/^CSP<T>::assignUniqueDomains ( void )$/;"	f	class:CSP	signature:( void )
-assignUniqueDomains	csp++.h	/^	void assignUniqueDomains ( void );$/;"	p	class:CSP	access:public	signature:( void )
-blue	fourcolours.cpp	/^	red, green, blue, yellow$/;"	e	enum:__anon2	file:
-c	fourcolours.cpp	/^c ( std::vector< CSPvariable<Colour> > variables)  {$/;"	f	signature:( std::vector< CSPvariable<Colour> > variables)
-cellsConstraint	sudoku.cpp	/^cellsConstraint ( std::vector< CSPvariable<int> > variables)$/;"	f	signature:( std::vector< CSPvariable<int> > variables)
-colours	fourcolours.cpp	/^static const char* colours[COLOURS] = {$/;"	v	file:
-colsConstraint	sudoku.cpp	/^colsConstraint ( std::vector< CSPvariable<int> > variables)$/;"	f	signature:( std::vector< CSPvariable<int> > variables)
-constraint	csp++.h	66;"	d
-constraints	csp++.h	/^	std::vector< bool (*)(std::vector< CSPvariable<T> >) > constraints;$/;"	m	class:CSP	access:private
-convertToId	doc/html/search/search.js	/^function convertToId(search)$/;"	f
-countries	fourcolours.cpp	/^static const char* countries[COUNTRIES] = {$/;"	v	file:
-domain	csp++.h	/^	std::vector<T> domain;$/;"	m	struct:CSPvariable	access:public
+constraint	csp++-def.h	91;"	d
+constraints	csp++-def.h	/^	std::vector< bool (*)(std::vector< CSPvariable<T> >) > constraints;$/;"	m	class:CSP	access:private
+domain	csp++-def.h	/^	std::vector<T> domain;$/;"	m	struct:CSPvariable	access:public
+dropConstraint	csp++-def.h	/^	void dropConstraint ( size_t index );$/;"	p	class:CSP	access:public	signature:( size_t index )
 dropConstraint	csp++.cpp	/^CSP<T>::dropConstraint ( size_t index )$/;"	f	class:CSP	signature:( size_t index )
-dropConstraint	csp++.h	/^	void dropConstraint ( size_t index );$/;"	p	class:CSP	access:public	signature:( size_t index )
-fixed	csp++.h	/^	bool fixed;$/;"	m	struct:CSPvariable	access:public
+fixed	csp++-def.h	/^	bool fixed;$/;"	m	struct:CSPvariable	access:public
+getDomain	csp++-def.h	/^	std::vector<T> getDomain ( size_t index );$/;"	p	class:CSP	access:public	signature:( size_t index )
 getDomain	csp++.cpp	/^CSP<T>::getDomain ( size_t index )$/;"	f	class:CSP	signature:( size_t index )
-getDomain	csp++.h	/^	std::vector<T> getDomain ( size_t index );$/;"	p	class:CSP	access:public	signature:( size_t index )
-getIndexByColour	fourcolours.cpp	/^getIndexByColour ( const char* colour )$/;"	f	signature:( const char* colour )
+getSize	csp++-def.h	/^	size_t getSize ( void );$/;"	p	class:CSP	access:public	signature:( void )
 getSize	csp++.cpp	/^CSP<T>::getSize( void )$/;"	f	class:CSP	signature:( void )
-getSize	csp++.h	/^	size_t getSize ( void );$/;"	p	class:CSP	access:public	signature:( void )
-getSudoku	sudoku.cpp	/^getSudoku (CSP<int>& csp, const char* sudokuFile)$/;"	f	signature:(CSP<int>& csp, const char* sudokuFile)
-getXPos	doc/html/search/search.js	/^function getXPos(item)$/;"	f
-getYPos	doc/html/search/search.js	/^function getYPos(item)$/;"	f
-green	fourcolours.cpp	/^	red, green, blue, yellow$/;"	e	enum:__anon2	file:
+getSolution	csp++-def.h	/^	void getSolution ( size_t maxIterations = 0 );$/;"	p	class:CSP	access:public	signature:( size_t maxIterations = 0 )
+getSolution	csp++.cpp	/^CSP<T>::getSolution ( size_t max_iterations )$/;"	f	class:CSP	signature:( size_t max_iterations )
+hasUniqueSolution	csp++-def.h	/^	bool hasUniqueSolution ( void );$/;"	p	class:CSP	access:public	signature:( void )
 hasUniqueSolution	csp++.cpp	/^CSP<T>::hasUniqueSolution ( void )$/;"	f	class:CSP	signature:( void )
-hasUniqueSolution	csp++.h	/^	bool hasUniqueSolution ( void );$/;"	p	class:CSP	access:public	signature:( void )
-index	csp++.h	/^	int index;$/;"	m	struct:CSPvariable	access:public
-indexSectionNames.0	doc/html/search/search.js	/^  0: "all",$/;"	p
-indexSectionNames.1	doc/html/search/search.js	/^  1: "classes",$/;"	p
-indexSectionNames.2	doc/html/search/search.js	/^  2: "functions"$/;"	p
-indexSectionsWithContent.0	doc/html/search/search.js	/^  0: "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000101100111000000001101000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",$/;"	p
-indexSectionsWithContent.1	doc/html/search/search.js	/^  1: "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",$/;"	p
-indexSectionsWithContent.2	doc/html/search/search.js	/^  2: "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000101100111000000001101000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000"$/;"	p
+index	csp++-def.h	/^	int index;$/;"	m	struct:CSPvariable	access:public
+isSatisfiable	csp++-def.h	/^	bool isSatisfiable ( void );$/;"	p	class:CSP	access:public	signature:( void )
 isSatisfiable	csp++.cpp	/^CSP<T>::isSatisfiable ( void )$/;"	f	class:CSP	signature:( void )
-isSatisfiable	csp++.h	/^	bool isSatisfiable ( void );$/;"	p	class:CSP	access:public	signature:( void )
+isSet	csp++-def.h	/^	bool isSet ( size_t i );$/;"	p	class:CSP	access:public	signature:( size_t i )
 isSet	csp++.cpp	/^CSP<T>::isSet ( size_t index )$/;"	f	class:CSP	signature:( size_t index )
-isSet	csp++.h	/^	bool isSet ( size_t i );$/;"	p	class:CSP	access:public	signature:( size_t i )
-l00001	doc/html/csp_09_09_8h_source.html	/^<h1>csp++.h<\/h1><div class="fragment"><pre class="fragment"><a name="l00001"><\/a>00001 <span class="comment">\/*<\/span>$/;"	a
-l00002	doc/html/csp_09_09_8h_source.html	/^<a name="l00002"><\/a>00002 <span class="comment"> * =====================================================================================<\/span>$/;"	a
-l00003	doc/html/csp_09_09_8h_source.html	/^<a name="l00003"><\/a>00003 <span class="comment"> *<\/span>$/;"	a
-l00004	doc/html/csp_09_09_8h_source.html	/^<a name="l00004"><\/a>00004 <span class="comment"> *       Filename:  csp++.h<\/span>$/;"	a
-l00005	doc/html/csp_09_09_8h_source.html	/^<a name="l00005"><\/a>00005 <span class="comment"> *<\/span>$/;"	a
-l00006	doc/html/csp_09_09_8h_source.html	/^<a name="l00006"><\/a>00006 <span class="comment"> *    Description:  <\/span>$/;"	a
-l00007	doc/html/csp_09_09_8h_source.html	/^<a name="l00007"><\/a>00007 <span class="comment"> *<\/span>$/;"	a
-l00008	doc/html/csp_09_09_8h_source.html	/^<a name="l00008"><\/a>00008 <span class="comment"> *        Version:  1.0<\/span>$/;"	a
-l00009	doc/html/csp_09_09_8h_source.html	/^<a name="l00009"><\/a>00009 <span class="comment"> *        Created:  16\/05\/2010 23:16:42<\/span>$/;"	a
-l00010	doc/html/csp_09_09_8h_source.html	/^<a name="l00010"><\/a>00010 <span class="comment"> *       Revision:  none<\/span>$/;"	a
-l00011	doc/html/csp_09_09_8h_source.html	/^<a name="l00011"><\/a>00011 <span class="comment"> *       Compiler:  gcc<\/span>$/;"	a
-l00012	doc/html/csp_09_09_8h_source.html	/^<a name="l00012"><\/a>00012 <span class="comment"> *<\/span>$/;"	a
-l00013	doc/html/csp_09_09_8h_source.html	/^<a name="l00013"><\/a>00013 <span class="comment"> *         Author:  BlackLight (http:\/\/0x00.ath.cx), &lt;blacklight@autistici.org&gt;<\/span>$/;"	a
-l00014	doc/html/csp_09_09_8h_source.html	/^<a name="l00014"><\/a>00014 <span class="comment"> *        Company:  lulz<\/span>$/;"	a
-l00015	doc/html/csp_09_09_8h_source.html	/^<a name="l00015"><\/a>00015 <span class="comment"> *<\/span>$/;"	a
-l00016	doc/html/csp_09_09_8h_source.html	/^<a name="l00016"><\/a>00016 <span class="comment"> * =====================================================================================<\/span>$/;"	a
-l00017	doc/html/csp_09_09_8h_source.html	/^<a name="l00017"><\/a>00017 <span class="comment"> *\/<\/span>$/;"	a
-l00018	doc/html/csp_09_09_8h_source.html	/^<a name="l00018"><\/a>00018 $/;"	a
-l00019	doc/html/csp_09_09_8h_source.html	/^<a name="l00019"><\/a>00019 <span class="preprocessor">#include        &lt;vector&gt;<\/span>$/;"	a
-l00020	doc/html/csp_09_09_8h_source.html	/^<a name="l00020"><\/a>00020 <span class="preprocessor">#include        &lt;exception&gt;<\/span>$/;"	a
-l00021	doc/html/csp_09_09_8h_source.html	/^<a name="l00021"><\/a>00021 $/;"	a
-l00022	doc/html/csp_09_09_8h_source.html	/^<a name="l00022"><\/a>00022 <span class="keyword">template<\/span>&lt;<span class="keyword">class<\/span> T&gt;$/;"	a
-l00023	doc/html/csp_09_09_8h_source.html	/^<a name="l00023"><\/a><a class="code" href="structCSPvariable.html">00023<\/a> <span class="keyword">struct <\/span><a class="code" href="structCSPvariable.html">CSPvariable<\/a>  {$/;"	a
-l00024	doc/html/csp_09_09_8h_source.html	/^<a name="l00024"><\/a>00024         <span class="keywordtype">int<\/span> index;$/;"	a
-l00025	doc/html/csp_09_09_8h_source.html	/^<a name="l00025"><\/a>00025         T value;$/;"	a
-l00026	doc/html/csp_09_09_8h_source.html	/^<a name="l00026"><\/a>00026         std::vector&lt;T&gt; domain;$/;"	a
-l00027	doc/html/csp_09_09_8h_source.html	/^<a name="l00027"><\/a>00027 };$/;"	a
-l00028	doc/html/csp_09_09_8h_source.html	/^<a name="l00028"><\/a>00028 $/;"	a
-l00033	doc/html/csp_09_09_8h_source.html	/^<a name="l00033"><\/a><a class="code" href="classCSPexception.html">00033<\/a> <span class="keyword">class <\/span><a class="code" href="classCSPexception.html" title="Class for managing exception in CSP.">CSPexception<\/a> : <span class="keyword">public<\/span> std::exception  {$/;"	a
-l00034	doc/html/csp_09_09_8h_source.html	/^<a name="l00034"><\/a>00034         <span class="keyword">const<\/span> <span class="keywordtype">char<\/span>* message;$/;"	a
-l00035	doc/html/csp_09_09_8h_source.html	/^<a name="l00035"><\/a>00035 $/;"	a
-l00036	doc/html/csp_09_09_8h_source.html	/^<a name="l00036"><\/a>00036 <span class="keyword">public<\/span>:$/;"	a
-l00037	doc/html/csp_09_09_8h_source.html	/^<a name="l00037"><\/a>00037         <a class="code" href="classCSPexception.html" title="Class for managing exception in CSP.">CSPexception<\/a> (<span class="keyword">const<\/span> <span class="keywordtype">char<\/span> *m)  {$/;"	a
-l00038	doc/html/csp_09_09_8h_source.html	/^<a name="l00038"><\/a>00038                 message = m;$/;"	a
-l00039	doc/html/csp_09_09_8h_source.html	/^<a name="l00039"><\/a>00039         }$/;"	a
-l00040	doc/html/csp_09_09_8h_source.html	/^<a name="l00040"><\/a>00040 $/;"	a
-l00041	doc/html/csp_09_09_8h_source.html	/^<a name="l00041"><\/a>00041         <span class="keyword">virtual<\/span> <span class="keyword">const<\/span> <span class="keywordtype">char<\/span>* what()  {$/;"	a
-l00042	doc/html/csp_09_09_8h_source.html	/^<a name="l00042"><\/a>00042                 <span class="keywordflow">return<\/span> message;$/;"	a
-l00043	doc/html/csp_09_09_8h_source.html	/^<a name="l00043"><\/a>00043         }$/;"	a
-l00044	doc/html/csp_09_09_8h_source.html	/^<a name="l00044"><\/a>00044 };$/;"	a
-l00045	doc/html/csp_09_09_8h_source.html	/^<a name="l00045"><\/a>00045 $/;"	a
-l00050	doc/html/csp_09_09_8h_source.html	/^<a name="l00050"><\/a>00050 <span class="keyword">template<\/span>&lt;<span class="keyword">class<\/span> T&gt;$/;"	a
-l00051	doc/html/csp_09_09_8h_source.html	/^<a name="l00051"><\/a><a class="code" href="classCSP.html">00051<\/a> <span class="keyword">class <\/span><a class="code" href="classCSP.html" title="Main class for managing a CSP.">CSP<\/a>  {$/;"	a
-l00052	doc/html/csp_09_09_8h_source.html	/^<a name="l00052"><\/a>00052 <span class="keyword">private<\/span>:$/;"	a
-l00053	doc/html/csp_09_09_8h_source.html	/^<a name="l00053"><\/a>00053         <span class="keyword">template<\/span>&lt;<span class="keyword">class<\/span> TT&gt;$/;"	a
-l00054	doc/html/csp_09_09_8h_source.html	/^<a name="l00054"><\/a>00054         <span class="keyword">struct <\/span>arc  {$/;"	a
-l00055	doc/html/csp_09_09_8h_source.html	/^<a name="l00055"><\/a>00055                 <a class="code" href="structCSPvariable.html">CSPvariable&lt;TT&gt;<\/a> var[2];$/;"	a
-l00056	doc/html/csp_09_09_8h_source.html	/^<a name="l00056"><\/a>00056                 TT value[2];$/;"	a
-l00057	doc/html/csp_09_09_8h_source.html	/^<a name="l00057"><\/a>00057         };$/;"	a
-l00058	doc/html/csp_09_09_8h_source.html	/^<a name="l00058"><\/a>00058 $/;"	a
-l00059	doc/html/csp_09_09_8h_source.html	/^<a name="l00059"><\/a>00059         std::vector&lt;bool&gt; fixed;$/;"	a
-l00060	doc/html/csp_09_09_8h_source.html	/^<a name="l00060"><\/a>00060         std::vector&lt; CSPvariable&lt;T&gt; &gt; variables;$/;"	a
-l00061	doc/html/csp_09_09_8h_source.html	/^<a name="l00061"><\/a>00061         std::vector&lt; bool (*)(std::vector&lt; CSPvariable&lt;T&gt; &gt;) &gt; constraints;$/;"	a
-l00062	doc/html/csp_09_09_8h_source.html	/^<a name="l00062"><\/a>00062 <span class="preprocessor">        #define         constraint      constraints[0]<\/span>$/;"	a
-l00063	doc/html/csp_09_09_8h_source.html	/^<a name="l00063"><\/a>00063 <span class="preprocessor"><\/span>$/;"	a
-l00064	doc/html/csp_09_09_8h_source.html	/^<a name="l00064"><\/a>00064         std::vector&lt; std::vector&lt;T&gt; &gt; __default_domains;$/;"	a
-l00065	doc/html/csp_09_09_8h_source.html	/^<a name="l00065"><\/a>00065         T __default_value;$/;"	a
-l00066	doc/html/csp_09_09_8h_source.html	/^<a name="l00066"><\/a>00066         <span class="keywordtype">bool<\/span> __has_default_value;$/;"	a
-l00067	doc/html/csp_09_09_8h_source.html	/^<a name="l00067"><\/a>00067         <span class="keyword">static<\/span> <span class="keywordtype">bool<\/span> __default_constraint ( std::vector&lt; <a class="code" href="structCSPvariable.html">CSPvariable&lt;T&gt;<\/a> &gt; v )  { <span class="keywordflow">return<\/span> <span class="keyword">true<\/span>; }$/;"	a
-l00068	doc/html/csp_09_09_8h_source.html	/^<a name="l00068"><\/a>00068         <span class="keywordtype">void<\/span> __init ( <span class="keywordtype">int<\/span> n, <span class="keywordtype">bool<\/span> (*c)(std::vector&lt; <a class="code" href="structCSPvariable.html">CSPvariable&lt;T&gt;<\/a> &gt;) );$/;"	a
-l00069	doc/html/csp_09_09_8h_source.html	/^<a name="l00069"><\/a>00069         <span class="keywordtype">void<\/span> restoreDomains ( <span class="keywordtype">void<\/span> );$/;"	a
-l00070	doc/html/csp_09_09_8h_source.html	/^<a name="l00070"><\/a>00070 $/;"	a
-l00071	doc/html/csp_09_09_8h_source.html	/^<a name="l00071"><\/a>00071 <span class="keyword">public<\/span>:$/;"	a
-l00081	doc/html/csp_09_09_8h_source.html	/^<a name="l00081"><\/a>00081         <a class="code" href="classCSP.html#ad49548121582cc2d59e0d7f100092b75" title="Class constructor.">CSP<\/a> ( <span class="keywordtype">int<\/span> n, <span class="keywordtype">bool<\/span> (*c)(std::vector&lt; <a class="code" href="structCSPvariable.html">CSPvariable&lt;T&gt;<\/a> &gt;) = __default_constraint );$/;"	a
-l00082	doc/html/csp_09_09_8h_source.html	/^<a name="l00082"><\/a>00082 $/;"	a
-l00096	doc/html/csp_09_09_8h_source.html	/^<a name="l00096"><\/a>00096         <a class="code" href="classCSP.html#ad49548121582cc2d59e0d7f100092b75" title="Class constructor.">CSP<\/a> ( <span class="keywordtype">int<\/span> n, T default_value, <span class="keywordtype">bool<\/span> set_variables = <span class="keyword">false<\/span>, <span class="keywordtype">bool<\/span> (*c)(std::vector&lt; <a class="code" href="structCSPvariable.html">CSPvariable&lt;T&gt;<\/a> &gt;) = __default_constraint );$/;"	a
-l00097	doc/html/csp_09_09_8h_source.html	/^<a name="l00097"><\/a>00097 $/;"	a
-l00104	doc/html/csp_09_09_8h_source.html	/^<a name="l00104"><\/a>00104         <span class="keywordtype">void<\/span> <a class="code" href="classCSP.html#a4017c17aac9d3e96d0e821ebbe09da7b" title="Set the domain for the i-th variable.">setDomain<\/a> ( <span class="keywordtype">size_t<\/span> index, std::vector&lt;T&gt; domain );$/;"	a
-l00105	doc/html/csp_09_09_8h_source.html	/^<a name="l00105"><\/a>00105 $/;"	a
-l00113	doc/html/csp_09_09_8h_source.html	/^<a name="l00113"><\/a>00113         <span class="keywordtype">void<\/span> <a class="code" href="classCSP.html#a4017c17aac9d3e96d0e821ebbe09da7b" title="Set the domain for the i-th variable.">setDomain<\/a> ( <span class="keywordtype">size_t<\/span> index, T domain[], <span class="keywordtype">int<\/span> size );$/;"	a
-l00114	doc/html/csp_09_09_8h_source.html	/^<a name="l00114"><\/a>00114 $/;"	a
-l00120	doc/html/csp_09_09_8h_source.html	/^<a name="l00120"><\/a>00120         <span class="keywordtype">void<\/span> <a class="code" href="classCSP.html#a534a0d9bd10fb544f94196bf3c386657" title="Apply the constraint to the CSP as a boolean function.">setConstraint<\/a> ( <span class="keywordtype">bool<\/span> (*c)(std::vector&lt; <a class="code" href="structCSPvariable.html">CSPvariable&lt;T&gt;<\/a> &gt;) );$/;"	a
-l00121	doc/html/csp_09_09_8h_source.html	/^<a name="l00121"><\/a>00121 $/;"	a
-l00128	doc/html/csp_09_09_8h_source.html	/^<a name="l00128"><\/a>00128         <span class="keywordtype">void<\/span> <a class="code" href="classCSP.html#a534a0d9bd10fb544f94196bf3c386657" title="Apply the constraint to the CSP as a boolean function.">setConstraint<\/a> ( std::vector&lt; <span class="keywordtype">bool<\/span>(*)(std::vector&lt; <a class="code" href="structCSPvariable.html">CSPvariable&lt;T&gt;<\/a> &gt;) &gt; c );$/;"	a
-l00129	doc/html/csp_09_09_8h_source.html	/^<a name="l00129"><\/a>00129 $/;"	a
-l00135	doc/html/csp_09_09_8h_source.html	/^<a name="l00135"><\/a>00135         <span class="keywordtype">void<\/span> <a class="code" href="classCSP.html#a0231b93bceae257f0e1c35041f8fe63f" title="Drops a constraint from the CSP.">dropConstraint<\/a> ( <span class="keywordtype">size_t<\/span> index );$/;"	a
-l00136	doc/html/csp_09_09_8h_source.html	/^<a name="l00136"><\/a>00136 $/;"	a
-l00142	doc/html/csp_09_09_8h_source.html	/^<a name="l00142"><\/a>00142         <span class="keywordtype">void<\/span> <a class="code" href="classCSP.html#a8dc6aec6ca7e40d198e58b0ec14fee66" title="Append a constraint to the list of the constraint of the CSP.">appendConstraint<\/a> ( <span class="keywordtype">bool<\/span> (*c)(std::vector&lt; <a class="code" href="structCSPvariable.html">CSPvariable&lt;T&gt;<\/a> &gt;) );$/;"	a
-l00143	doc/html/csp_09_09_8h_source.html	/^<a name="l00143"><\/a>00143 $/;"	a
-l00148	doc/html/csp_09_09_8h_source.html	/^<a name="l00148"><\/a>00148         <span class="keywordtype">void<\/span> <a class="code" href="classCSP.html#a466845256e638c5e258fd728b641359f" title="Updates the domains of the variables. Any constraint or node fixed value is applied...">refreshDomains<\/a>( <span class="keywordtype">void<\/span> );$/;"	a
-l00149	doc/html/csp_09_09_8h_source.html	/^<a name="l00149"><\/a>00149 $/;"	a
-l00156	doc/html/csp_09_09_8h_source.html	/^<a name="l00156"><\/a>00156         std::vector&lt;T&gt; <a class="code" href="classCSP.html#a2a9a7d8072613f6984795d5495373847" title="Get the domain of the i-th variable.">getDomain<\/a> ( <span class="keywordtype">size_t<\/span> index );$/;"	a
-l00157	doc/html/csp_09_09_8h_source.html	/^<a name="l00157"><\/a>00157 $/;"	a
-l00163	doc/html/csp_09_09_8h_source.html	/^<a name="l00163"><\/a>00163         <span class="keywordtype">size_t<\/span> <a class="code" href="classCSP.html#a91a0e89bc1882d39b88122bee392c5f3" title="Get the number of variables in the current CSP.">getSize<\/a> ( <span class="keywordtype">void<\/span> );$/;"	a
-l00164	doc/html/csp_09_09_8h_source.html	/^<a name="l00164"><\/a>00164         $/;"	a
-l00171	doc/html/csp_09_09_8h_source.html	/^<a name="l00171"><\/a>00171         <span class="keywordtype">void<\/span> <a class="code" href="classCSP.html#ac25064c5b2d4e1020173b56913251ebd" title="Set the value of a variable as a constraint.">setValue<\/a> ( <span class="keywordtype">size_t<\/span> index, T value );$/;"	a
-l00172	doc/html/csp_09_09_8h_source.html	/^<a name="l00172"><\/a>00172 $/;"	a
-l00181	doc/html/csp_09_09_8h_source.html	/^<a name="l00181"><\/a>00181         <span class="keywordtype">void<\/span> <a class="code" href="classCSP.html#a4c0cae125a610f519dc22eaec255a0ae" title="Marks a variable as not set, and if a default value was assigned in the CSP constructor...">unsetValue<\/a> ( <span class="keywordtype">size_t<\/span> index );$/;"	a
-l00182	doc/html/csp_09_09_8h_source.html	/^<a name="l00182"><\/a>00182 $/;"	a
-l00188	doc/html/csp_09_09_8h_source.html	/^<a name="l00188"><\/a>00188         <span class="keywordtype">bool<\/span> <a class="code" href="classCSP.html#a7ef9eb91c38815c9d82182696a6bd5d3" title="Check if the current CSP, with the applied constraints, is satisfiable.">isSatisfiable<\/a> ( <span class="keywordtype">void<\/span> );$/;"	a
-l00189	doc/html/csp_09_09_8h_source.html	/^<a name="l00189"><\/a>00189 $/;"	a
-l00190	doc/html/csp_09_09_8h_source.html	/^<a name="l00190"><\/a>00190         $/;"	a
-l00198	doc/html/csp_09_09_8h_source.html	/^<a name="l00198"><\/a>00198         <span class="keywordtype">bool<\/span> <a class="code" href="classCSP.html#ae96286c6c7dfb6fe077544e0d4af15f4" title="Check if the CSP, with the given variables, domains and constraints, admits a unique...">hasUniqueSolution<\/a> ( <span class="keywordtype">void<\/span> );$/;"	a
-l00199	doc/html/csp_09_09_8h_source.html	/^<a name="l00199"><\/a>00199 };$/;"	a
-l00200	doc/html/csp_09_09_8h_source.html	/^<a name="l00200"><\/a>00200 $/;"	a
-latex_count	doc/latex/Makefile	/^	latex_count=5 ; \\$/;"	m
-letter_C	doc/html/classes.html	/^<tr><td><a name="letter_C"><\/a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&nbsp;&nbsp;C&nbsp;&nbsp;<\/div><\/td><\/tr><\/table>$/;"	a
-main	fourcolours.cpp	/^main ( int argc, char *argv[] )$/;"	f	signature:( int argc, char *argv[] )
-main	sudoku.cpp	/^main ( int argc, char *argv[] )$/;"	f	signature:( int argc, char *argv[] )
-message	csp++.h	/^	const char* message;$/;"	m	class:CSPexception	access:private
-printDomain	fourcolours.cpp	/^printDomain (CSP<Colour> csp, int variable)$/;"	f	signature:(CSP<Colour> csp, int variable)
-printDomains	fourcolours.cpp	/^printDomains (CSP<Colour> csp)$/;"	f	signature:(CSP<Colour> csp)
-printSudoku	sudoku.cpp	/^printSudoku (CSP<int> csp)$/;"	f	signature:(CSP<int> csp)
-red	fourcolours.cpp	/^	red, green, blue, yellow$/;"	e	enum:__anon2	file:
+message	csp++-def.h	/^	const char* message;$/;"	m	class:CSPexception	access:private
+refreshDomains	csp++-def.h	/^	void refreshDomains ( void );$/;"	p	class:CSP	access:public	signature:( void )
 refreshDomains	csp++.cpp	/^CSP<T>::refreshDomains ( void )$/;"	f	class:CSP	signature:( void )
-refreshDomains	csp++.h	/^	void refreshDomains( void );$/;"	p	class:CSP	access:public	signature:( void )
+restoreDomains	csp++-def.h	/^	void restoreDomains ( void );$/;"	p	class:CSP	access:private	signature:( void )
 restoreDomains	csp++.cpp	/^CSP<T>::restoreDomains ( void )$/;"	f	class:CSP	signature:( void )
-restoreDomains	csp++.h	/^	void restoreDomains ( void );$/;"	p	class:CSP	access:private	signature:( void )
-rowsConstraint	sudoku.cpp	/^rowsConstraint ( std::vector< CSPvariable<int> > variables)$/;"	f	signature:( std::vector< CSPvariable<int> > variables)
+setConstraint	csp++-def.h	/^	void setConstraint ( bool (*c)(std::vector< CSPvariable<T> >) );$/;"	p	class:CSP	access:public	signature:( bool (c)std::vector< CSPvariable<T> >) )
+setConstraint	csp++-def.h	/^	void setConstraint ( std::vector< bool(*)(std::vector< CSPvariable<T> >) > c );$/;"	p	class:CSP	access:public	signature:( std::vector< bool(*)(std::vector< CSPvariable<T> >) > c )
 setConstraint	csp++.cpp	/^CSP<T>::setConstraint ( bool (*c)(vector< CSPvariable<T> >))$/;"	f	class:CSP	signature:( bool (c)vector< CSPvariable<T> >))
 setConstraint	csp++.cpp	/^CSP<T>::setConstraint ( std::vector< bool(*)(std::vector< CSPvariable<T> >) > c )$/;"	f	class:CSP	signature:( std::vector< bool(*)(std::vector< CSPvariable<T> >) > c )
-setConstraint	csp++.h	/^	void setConstraint ( bool (*c)(std::vector< CSPvariable<T> >) );$/;"	p	class:CSP	access:public	signature:( bool (c)std::vector< CSPvariable<T> >) )
-setConstraint	csp++.h	/^	void setConstraint ( std::vector< bool(*)(std::vector< CSPvariable<T> >) > c );$/;"	p	class:CSP	access:public	signature:( std::vector< bool(*)(std::vector< CSPvariable<T> >) > c )
+setDomain	csp++-def.h	/^	void setDomain ( size_t index, T domain[], int size );$/;"	p	class:CSP	access:public	signature:( size_t index, T domain[], int size )
+setDomain	csp++-def.h	/^	void setDomain ( size_t index, std::vector<T> domain );$/;"	p	class:CSP	access:public	signature:( size_t index, std::vector<T> domain )
 setDomain	csp++.cpp	/^CSP<T>::setDomain (size_t index, T domain[], int size)$/;"	f	class:CSP	signature:(size_t index, T domain[], int size)
 setDomain	csp++.cpp	/^CSP<T>::setDomain (size_t index, vector<T> domain)$/;"	f	class:CSP	signature:(size_t index, vector<T> domain)
-setDomain	csp++.h	/^	void setDomain ( size_t index, T domain[], int size );$/;"	p	class:CSP	access:public	signature:( size_t index, T domain[], int size )
-setDomain	csp++.h	/^	void setDomain ( size_t index, std::vector<T> domain );$/;"	p	class:CSP	access:public	signature:( size_t index, std::vector<T> domain )
+setValue	csp++-def.h	/^	void setValue ( size_t index, T value );$/;"	p	class:CSP	access:public	signature:( size_t index, T value )
 setValue	csp++.cpp	/^CSP<T>::setValue ( size_t index, T value )$/;"	f	class:CSP	signature:( size_t index, T value )
-setValue	csp++.h	/^	void setValue ( size_t index, T value );$/;"	p	class:CSP	access:public	signature:( size_t index, T value )
-template$ $class T$ $ class CSP$ $ T $ $	doc/latex/classCSP.tex	/^\\subsubsection*{template$<$class T$>$ class CSP$<$ T $>$}$/;"	b
-template$ $class T$ $ struct CSPvariable$ $ T $ $	doc/latex/structCSPvariable.tex	/^\\subsubsection*{template$<$class T$>$ struct CSPvariable$<$ T $>$}$/;"	b
-toID	sudoku.cpp	/^toID (int i, int j)$/;"	f	signature:(int i, int j)
+unsetValue	csp++-def.h	/^	void unsetValue ( size_t index );$/;"	p	class:CSP	access:public	signature:( size_t index )
 unsetValue	csp++.cpp	/^CSP<T>::unsetValue ( size_t index )$/;"	f	class:CSP	signature:( size_t index )
-unsetValue	csp++.h	/^	void unsetValue ( size_t index );$/;"	p	class:CSP	access:public	signature:( size_t index )
-usage	doc/html/installdox	/^sub usage {$/;"	s
+value	csp++-def.h	/^		TT value[2];$/;"	m	struct:CSP::arc	access:public
+value	csp++-def.h	/^	T value ( size_t i );$/;"	p	class:CSP	access:public	signature:( size_t i )
+value	csp++-def.h	/^	T value;$/;"	m	struct:CSPvariable	access:public
 value	csp++.cpp	/^CSP<T>::value ( size_t index )$/;"	f	class:CSP	signature:( size_t index )
-value	csp++.h	/^		TT value[2];$/;"	m	struct:CSP::arc	access:public
-value	csp++.h	/^	T value ( size_t i );$/;"	p	class:CSP	access:public	signature:( size_t i )
-value	csp++.h	/^	T value;$/;"	m	struct:CSPvariable	access:public
-valueOK	fourcolours.cpp	/^valueOK ( CSP<Colour> csp, size_t variable, Colour value )  {$/;"	f	signature:( CSP<Colour> csp, size_t variable, Colour value )
-var	csp++.h	/^		CSPvariable<TT> var[2];$/;"	m	struct:CSP::arc	access:public
-variables	csp++.h	/^	std::vector< CSPvariable<T> > variables;$/;"	m	class:CSP	access:private
-what	csp++.h	/^	virtual const char* what()  {$/;"	f	class:CSPexception	access:public	signature:()
-yellow	fourcolours.cpp	/^	red, green, blue, yellow$/;"	e	enum:__anon2	file:
+var	csp++-def.h	/^		CSPvariable<TT> var[2];$/;"	m	struct:CSP::arc	access:public
+variables	csp++-def.h	/^	std::vector< CSPvariable<T> > variables;$/;"	m	class:CSP	access:private
+what	csp++-def.h	/^	virtual const char* what()  {$/;"	f	class:CSPexception	access:public	signature:()
